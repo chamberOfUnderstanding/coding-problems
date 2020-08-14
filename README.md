@@ -1,4 +1,4 @@
-# java-problems
+# Java Problems
 Solutions to coding problems from various sources in Java
 
 # Arrays
