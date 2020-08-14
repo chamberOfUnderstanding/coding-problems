@@ -21,7 +21,7 @@ package backtracking;
  * 
  */
 
-public class Sudoku {
+public class Sudoku_Solver {
     public static void main(String[] args) {
         int[][] sudoku = 
                {{3, 0, 6, 5, 0, 8, 4, 0, 0},

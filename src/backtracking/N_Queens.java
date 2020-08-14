@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author 47un
  *
- * The N Queen is the problem of placing N chess queens on an N×N chess board so that no two queens attack each other
+ * The N Queen is the problem of placing N chess queens on an NxN chess board so that no two queens attack each other
  * Check if there is a solution to this problem for a given value of n
  * 
  * http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/
