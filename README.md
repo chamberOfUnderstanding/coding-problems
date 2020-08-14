@@ -1,5 +1,5 @@
 # java-problems
-Solutions to coding problems from various sources in java
+Solutions to coding problems from various sources in Java
 
 # Arrays
 
