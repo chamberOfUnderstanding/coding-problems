@@ -5,15 +5,19 @@ Solutions to coding problems from various sources in Java
 
 | Problem                                                    | Solution                                                 | Reference   |
 | ---------------------------------------------------------- |--------------------------------------------------------| -----|
-| Add one to a number represented as an array of digits      | [Add_One_To_An_Array](src/array/Add_One_To_An_Array.java) | [Ref1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
+| Add one to a number represented as an array of digits      | [Add_One_To_An_Array](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
 | Add two numbers represented as an array of digits      | [Add_Two_Arrays](src/array/Add_Two_Arrays.java) |  |
+| Print x items from index i of an array | [Circular_Array](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
+| Is circular tour possible, given the cost and distance values | [Circular_Tour](src/array/Circular_Tour.java)| [1](http://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/) |
+| Array index where left sum is equal to right sum | [Equilibrium_Index](src/array/Equilibrium_Index.java)|[1](http://www.geeksforgeeks.org/equilibrium-index-of-an-array/)|
+| Find the number of times a sorted array has been rotated | [Find_Rotations](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
 
 # Backtracking
 
 | Problem                                                    | Solution                                                 | Reference   |
 | ---------------------------------------------------------- |--------------------------------------------------------| -----|
-| Find all combinations of array elements that can produce the given sum      | [Combination_Sum](src/backtracking/Combination_Sum.java) | [Ref1](https://discuss.leetcode.com/topic/46161/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning) |
-| Find the path taken by a knight to cover the entire chess board      | [Knights_Tour](src/array/Knights_Tour.java) | [Ref1](http://www.geeksforgeeks.org/backtracking-set-1-the-knights-tour-problem/) |
-| Find a configuration in an NxN chess board where N queens won't attack eachother       | [N_Queens](src/array/N_Queens.java) | [Ref1](http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/) |
-| Find all sub arrays of the given array      | [Subsets](src/array/Subsets.java) |  |
-| Find a solution for the given sudoku puzzle      | [Sudoku_Solver](src/array/Sudoku_Solver.java) | [Ref1](http://www.geeksforgeeks.org/backtracking-set-7-suduku/) |
+| All combinations of array elements that can produce the given sum      | [Combination_Sum](src/backtracking/Combination_Sum.java) | [1](https://discuss.leetcode.com/topic/46161/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning) |
+| The path taken by a knight to cover the entire chess board      | [Knights_Tour](src/array/Knights_Tour.java) | [1](http://www.geeksforgeeks.org/backtracking-set-1-the-knights-tour-problem/) |
+| A configuration in an NxN chess board where N queens won't attack eachother       | [N_Queens](src/array/N_Queens.java) | [1](http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/) |
+| All sub arrays of the given array      | [Subsets](src/array/Subsets.java) |  |
+| Solution for the given sudoku puzzle      | [Sudoku_Solver](src/array/Sudoku_Solver.java) | [1](http://www.geeksforgeeks.org/backtracking-set-7-suduku/) |
