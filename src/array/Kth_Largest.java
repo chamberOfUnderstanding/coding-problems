@@ -48,7 +48,7 @@ import java.util.PriorityQueue;
  */
 
 @SuppressWarnings("unused")
-public class Kth_Largest_In_An_Array {
+public class Kth_Largest {
 
     public static void main(String...strings){		
         int[] array = {-44, 2, 50, 4, 0, 1223, -4232, 869, 99};

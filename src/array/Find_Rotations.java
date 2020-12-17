@@ -5,14 +5,14 @@ package array;
  * 
  * Given a sorted array which is rotated 'N' times. Find the value of 'N'.
  * 
- * http://www.practice.geeksforgeeks.org/problem-page.php?pid=145
+ * https://practice.geeksforgeeks.org/problems/rotation4723/1
  * 
  * ===========
  * METHOD 1 
  * ===========
- * If the current value is less than the previous value,
- *   then number of left rotations = current index
- *   and number of right rotations = array length - current index
+ * Loop till current value is greater than the previous value,
+ * left rotations = current index
+ * right rotations = array length - current index
  * If the array seems sorted, then rotations = 0
  *
  * TIME     : O(n)
@@ -25,6 +25,7 @@ public class Find_Rotations {
 
 	public static void main(String[] args) {
 		test(new int[]{5, 1, 2, 3, 4});
+		test(new int[]{1, 2, 3, 4, 5});
 	}
 
 	private static void test( int[] input) {
@@ -34,7 +35,7 @@ public class Find_Rotations {
 	public static void findRotations(int[] input){
 		int i = 1;
 		for( ; i < input.length && input[i] > input[i - 1]; i++);
-		System.out.println("Left Rotations  : " + i);
-		System.out.println("Right Rotations : " + (input.length - i));
+		System.out.println("Left  : " + i % input.length);
+		System.out.println("Right : " + (input.length - i) % input.length);
 	}
 }

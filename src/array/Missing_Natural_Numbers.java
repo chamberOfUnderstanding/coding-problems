@@ -1,5 +1,6 @@
 package array;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -9,44 +10,50 @@ import java.util.Arrays;
  *
  * https://www.geeksforgeeks.org/find-first-k-natural-numbers-missing-given-array/
  * 
- * =========== METHOD ONE ===========
  *
  * TIME  : O(n)
  * SPACE : O(1)
  * 
  */
 
-public class K_Missing_Numbers {
+public class Missing_Natural_Numbers {
 
 	public static void main(String[] args) {
-		test(new int[]{12, 37, 9, 1, 30, 28, 29, 24, 31, 4}, 40);
+		test(new int[]{-5, 10, -3}, 10);
+		test(new int[]{4, -2, -3}, 2);
+		test(new int[]{9, 1, 2, 7, 9, 5, 6, 2, 4, 4, 5, 5, 10,10, 1}, 2);
+		test(new int[]{9, 9, 8, 2, 8, 8, 3, 9, 6, 9, 1, 8, 6, 4, 3, 4, 9, 4, 4, 6}, 5);
 	}
 
-	private static void test(int[] input, int n) {
-		findMissingNumbers_I(input, n, n - input.length);
+	private static void test(int[] input, int k) {
+		findMissingNaturalNumbers(input, input.length, k);
 	}
 
-	private static void findMissingNumbers_I(int[] input, int n, int k) {
+
+	private static void findMissingNaturalNumbers(int[] input, int n, int k) {
 		Arrays.sort(input);
-		int left = input[0];
-		int right = input[0] + n;
-		for(int i = 0; i < input.length && left < right; i++) {
-			while(++left != input[i])
-				System.out.print(left + " ");
-			while(--right != input[n - k - i - 1])
-				System.out.print(right + " ");
+		ArrayList<Long> missingNumbers = new ArrayList<>();
+		int current = 0;
+		// Skip positive numbers
+		for(; current < n && input[current] < 0; current++);
+		long missingNumber = 1, previous = Integer.MIN_VALUE;
+		while(current < n && missingNumbers.size() < k) {
+			// Skip duplicate numbers
+			for (; input[current] == previous && current < n - 1; current++);
+			// Record any missing numbers else record the current index as previous
+			if (missingNumber != input[current]) {
+				missingNumbers.add(missingNumber);
+			} else {
+				previous = input[current];
+				current++;
+			}
+			missingNumber++;
 		}
-	}
+		for (; missingNumbers.size() < k; missingNumbers.add(missingNumber++));
 
-	private static void findMissingNumbers_II(int[] numbers, int n, int k) {
-		int prev = 1;
-		for(int i = 0; i < numbers.length; i++) {
-			int j = prev;
-			while(j != numbers[i])
-				System.out.print(j++ + " ");
-			prev = numbers[i] + 1;
+		for(long x : missingNumbers) {
+			System.out.print(x + " ");
 		}
-		while(prev != n + 1)
-			System.out.print(prev++ + " ");
+		System.out.println();
 	}
 }

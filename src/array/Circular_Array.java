@@ -17,7 +17,7 @@ public class Circular_Array {
 	public static void main(String[] args) {
 		char[] array = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
 		int start = 4;
-		int items = 5;
+		int items = 8;
 		circular_Print(array, start, items);
 	}
 

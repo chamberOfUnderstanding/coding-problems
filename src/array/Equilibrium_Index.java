@@ -26,6 +26,7 @@ package array;
 public class Equilibrium_Index {
 
 	public static void main(String[] args) {
+		test(new int[] {1});
 		test(new int[]{99, 1, 4, 5, 0, 99, 7, 0, 208, -99, 99});
 		test(new int[]{47, 0, 0, 0, 0, 0, -4, 1, 0, 43});
 		test(new int[]{4, -22123, 0, -4, 1, 0, 43});

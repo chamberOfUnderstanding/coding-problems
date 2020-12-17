@@ -18,65 +18,58 @@ package array;
  * ====================
  * METHOD 1 : Iteration
  * ====================
- * Scan each petrol pump
- *  Get the left over petrol by subtracting distance from the petrol quantity
- *  Add this value to the petrol total
- *  If current petrol is < 0, then
- *   The start has to be changed to the current pump
- *   And current petrol is now the leftover petrol
- *  Else if the current petrol is >=0 then add the left over petrol to the current petrol
- * After scanning all the pumps, if the total petrol is >= 0 then the truck should start at 'start' else there is no solution
+ * Use a queue or maintain start and end indices for the given array to use it as a queue.
  * 
- * If starting from pump 0, pump 5 was reached and then the truck ran out of petrol
- * Then no need to start from pump 1 as there's no way there can be a cycle if started from 1
- * Next index to start from would be 6 
+ * Scan each petrol pump
+ *  leftover = petrol qty - dist (whatever is left when reaching pump i)
+ *  if leftover < 0 then we cant start there, reset it to 0 and mark start as the next index
+ *  this has to be added to the total too (since there is no possible circular tour if the total leftOver petrol is < 0)
  *  
+ *    
  * TIME     : O(n)
  * SPACE    : O(1)
  *
  * 
  */
 
-public class Circular_Tour_Of_Petrol_Pumps{
+public class Circular_Tour{
 
-    public static void main(String...x){
-        PetrolPump[] petrolPumps = new PetrolPump[4];
-        petrolPumps[0] = new PetrolPump(4, 6);
-        petrolPumps[1] = new PetrolPump(6, 5);
-        petrolPumps[2] = new PetrolPump(7, 3);
-        petrolPumps[3] = new PetrolPump(4, 5);
-        System.out.println(findWhereToStart(petrolPumps));
-    }
+	public static void main(String...x){
+		PetrolPump[] petrolPumps = new PetrolPump[4];
+		petrolPumps[0] = new PetrolPump(4, 6);
+		petrolPumps[1] = new PetrolPump(6, 5);
+		petrolPumps[2] = new PetrolPump(7, 3);
+		petrolPumps[3] = new PetrolPump(4, 5);
+		System.out.println(findWhereToStart(petrolPumps));
+	}
 
-    private static int findWhereToStart(PetrolPump[] petrolPumps) {
-        int start         = 0;
-        int totalPertrol  = 0;
-        int currentPetrol = 0;
-        for(int i = 0; i < petrolPumps.length; i++){
-            int leftoverPetrol = petrolPumps[i].petrol - petrolPumps[i].distance;
-            totalPertrol += leftoverPetrol;
-            if(currentPetrol < 0) {
-                start = i;
-                currentPetrol = leftoverPetrol;
-            }
-            else
-                currentPetrol += leftoverPetrol;
-        }
-        return totalPertrol < 0? -1 : start;
-    }
+	private static int findWhereToStart(PetrolPump[] petrolPumps) {
+		int start   = 0;
+		int total   = 0;
+		int current = 0;
+		for(int i = 0; i < petrolPumps.length; i++){
+			current += petrolPumps[i].petrol - petrolPumps[i].distance;
+			if(current < 0) {
+				current = 0;
+				start = i + 1;
+			}
+			total += petrolPumps[i].petrol - petrolPumps[i].distance;
+		}
+		return total < 0? -1 : start;
+	}
 
-    public static class PetrolPump{
-        int petrol;
-        int distance;
+	public static class PetrolPump{
+		int petrol;
+		int distance;
 
-        PetrolPump(int petrol, int distance){
-            this.petrol   = petrol;
-            this.distance = distance;
-        }
+		PetrolPump(int petrol, int distance){
+			this.petrol   = petrol;
+			this.distance = distance;
+		}
 
-        @Override
-        public String toString() {
-            return new String(petrol + " " + distance);
-        }
-    }
+		@Override
+		public String toString() {
+			return new String(petrol + " " + distance);
+		}
+	}
 }
