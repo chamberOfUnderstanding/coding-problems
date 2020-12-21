@@ -24,7 +24,7 @@ Solutions to coding problems from various sources in Java
 | All sub arrays of the given array      | [Subsets](src/array/Subsets.java) |  |
 | Solution for the given sudoku puzzle      | [Sudoku_Solver](src/array/Sudoku_Solver.java) | [1](http://www.geeksforgeeks.org/backtracking-set-7-suduku/) |
 
-# Serching & Sorting
+# Searching & Sorting
 | Problem                                                    | Solution                                                 | Reference   |
 | ---------------------------------------------------------- |--------------------------------------------------------| -----|
 | Binary Search | [Binary_Search](src/sorting_searching/Binary_Search.java)| |
