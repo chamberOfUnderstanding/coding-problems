@@ -27,13 +27,12 @@ public class Binary_Search {
 		    int item = -34;
 			//Array needs to be sorted for this to work
 			Arrays.sort(array);
-			Binary_Search binarySearch = new Binary_Search();
-			int result = binarySearch.binarySearchIterative(array,size,item);
-			System.out.println(binarySearch.binarySearchRecursive(array, 0, size-1, item));
+			int result = binarySearchIterative(array,size,item);
+			System.out.println(binarySearchRecursive(array, 0, size-1, item));
 			System.out.print(result ==- 1?"\nItem not found!":"\nItem found");
 	}
 
-    private boolean binarySearchRecursive(int[] array, int low, int high, int item){
+    private static boolean binarySearchRecursive(int[] array, int low, int high, int item){
 		if(low <= high)	{
 			int mid = (low + high)>>1;
 			if(array[mid] < item)
@@ -45,7 +44,7 @@ public class Binary_Search {
 		return false;
 	}
 
-	private int binarySearchIterative(int[] array,int size,int item){
+	private static int binarySearchIterative(int[] array,int size,int item){
 		int low  = 0;
 		int high = size-1;
 		int mid;

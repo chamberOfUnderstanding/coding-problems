@@ -33,13 +33,12 @@ public class Bubble_Sort {
 	public static void main(String[] args) {
 		int[] unsortedArray = {4,1,3,-34,55,-100,232323,1,3,4};
 		int[] sortedArray = {-100, -34, 1, 1, 3, 3, 4, 4, 55, 232323};
-		Bubble_Sort bubbleSort = new Bubble_Sort();
-		bubbleSort.sort(unsortedArray);
+        bubbleSort(unsortedArray);
 		for(int item : unsortedArray)
 			System.out.print(item + " ");
 	}	
 	
-	public void sort(int[] array){
+	public static void bubbleSort(int[] array){
 		int size      = array.length;
 		boolean swaps = true;
 		for(int i = 0; i < size && swaps; i++){
@@ -50,16 +49,15 @@ public class Bubble_Sort {
 		}
 	}
 
-	public boolean swap(int[] array, int index1, int index2){
+	public static boolean swap(int[] array, int index1, int index2){
 		int temp = array[index2];
 		array[index2]=array[index1];
 		array[index1]=temp;
 		return true;
 	}
 	
-	// WOAH!
 	// https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/xor.html
-	public boolean swapUsingXOR(int[] array, int index1, int index2) {
+	public static boolean swapUsingXOR(int[] array, int index1, int index2) {
 	    array[index1] = array[index1] ^ array[index2];
 	    array[index2] = array[index1] ^ array[index2];
 	    array[index1] = array[index1] ^ array[index2];

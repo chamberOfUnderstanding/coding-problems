@@ -14,7 +14,8 @@ package sorting_searching;
  * Assume i-th element is the least (min)
  * Iterate through the rest of the array (j loop and it starts at i)
  * If any of the remaining values is less that the assumed least value, update min
- * After iterating through the rest of the array (j loop ends),swap the value at min with the value at i
+ * After iterating through the rest of the array (j loop ends),swap the value at min with the value at i -
+ *  This brings i-th smallest item to index i
  *  
  */
 

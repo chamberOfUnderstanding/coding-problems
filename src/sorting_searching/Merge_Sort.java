@@ -36,14 +36,23 @@ public class Merge_Sort {
 
 	public static void main(String[] args) {
 		int[] unsortedArray = {4,1,3,-34,55,-100,232323,1,3,4,-111212};
-		Merge_Sort mergeSort = new Merge_Sort();
-		mergeSort.mergeSort(unsortedArray,0,unsortedArray.length-1);
+		int[] unsortedArray2 = {1,3,-34,55,-100,232323,1,3,4,-111212};
+		int[] unsortedArray3 = {3, 3, 3, 3, 3, 3, 3, 3, 3, 3};
+		mergeSort(unsortedArray,0,unsortedArray.length-1);
+		mergeSort(unsortedArray2,0,unsortedArray2.length-1);
+		mergeSort(unsortedArray3,0,unsortedArray3.length-1);
 		for(int i : unsortedArray)
+			System.out.print(i+" ");
+		System.out.println();
+		for(int i : unsortedArray2)
+			System.out.print(i+" ");
+		System.out.println();
+		for(int i : unsortedArray3)
 			System.out.print(i+" ");
 	}
 
-	private void mergeSort(int[] array, int low, int high){
-		if(low < high){
+	private static void mergeSort(int[] array, int low, int high){
+		if(low != high){
 			int middle = (low + high)>>1;
 			mergeSort(array, low, middle);
 			mergeSort(array, middle+1, high);
@@ -52,9 +61,11 @@ public class Merge_Sort {
 	}
 
 	private static void merge(int[] array, int low, int middle, int high) {
+		// Elements from low to middle need a size of middle - low + 1
 		int[] leftArray = new int[middle - low + 1];
 		System.arraycopy(array, low, leftArray, 0, leftArray.length);
 
+		// Elements from middle + 1 to high need a size of high - middle - 1 + 1 => high - middle
 		int[] rightArray = new int[high - middle];
 		System.arraycopy(array, middle + 1, rightArray, 0, rightArray.length);
 
@@ -68,5 +79,6 @@ public class Merge_Sort {
 			array[k++] = leftArray[i++];
 		while(j < rightArray.length)
 			array[k++] = rightArray[j++];
-	}		
+	}	
+		
 }

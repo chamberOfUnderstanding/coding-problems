@@ -7,7 +7,7 @@ Solutions to coding problems from various sources in Java
 | ---------------------------------------------------------- |--------------------------------------------------------| -----|
 | Add one to a number represented as an array of digits      | [Add_One_To_An_Array](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
 | Add two numbers represented as an array of digits      | [Add_Two_Arrays](src/array/Add_Two_Arrays.java) |  |
-| Print x items from index i of an array | [Circular_Array](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
+| Print x items from index i | [Circular_Array](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
 | Given the cost and distance values is a circular tour possible| [Circular_Tour](src/array/Circular_Tour.java)| [1](http://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/) |
 | Array index where left sum is equal to right sum | [Equilibrium_Index](src/array/Equilibrium_Index.java)|[1](http://www.geeksforgeeks.org/equilibrium-index-of-an-array/)|
 | Find the number of times a sorted array has been rotated | [Find_Rotations](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
@@ -23,3 +23,12 @@ Solutions to coding problems from various sources in Java
 | A configuration in an NxN chess board where N queens won't attack eachother       | [N_Queens](src/array/N_Queens.java) | [1](http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/) |
 | All sub arrays of the given array      | [Subsets](src/array/Subsets.java) |  |
 | Solution for the given sudoku puzzle      | [Sudoku_Solver](src/array/Sudoku_Solver.java) | [1](http://www.geeksforgeeks.org/backtracking-set-7-suduku/) |
+
+# Serching & Sorting
+| Problem                                                    | Solution                                                 | Reference   |
+| ---------------------------------------------------------- |--------------------------------------------------------| -----|
+| Binary Search | [Binary_Search](src/sorting_searching/Binary_Search.java)| |
+| Bubble Sort | [Bubble_Sort](src/sorting_searching/Bubble_Sort.java)| [1](https://visualgo.net/sorting), [2](https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/xor.html)|
+| Insertion Sort | [Insertion_Sort](src/sorting_searching/Insertion_Sort.java)| [1](https://visualgo.net/sorting)|
+| Selection Sort | [Selection_Sort](src/sorting_searching/Selection_Sort.java)| [1](https://visualgo.net/sorting)|
+| Merge Sort | [Merge_Sort](src/sorting_searching/Merge_Sort.java)| [1](https://visualgo.net/sorting)|

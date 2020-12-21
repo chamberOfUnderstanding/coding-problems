@@ -23,7 +23,7 @@ package sorting_searching;
  * Save the current item (This item needs to be inserted in its proper location in the sorted left sub array)
  * For each element, scan right to left ( j loop)
  * If previous element is larger than item, copy and replace current element
- * When j loop ends, replace element a[j] with item
+ * When j loop ends, a[j] is a spot with a duplicate element, and the item that was saved previously goes here
  * 
  * INVARIANT      : a[1....i] is sorted
  * 
@@ -51,7 +51,7 @@ public class Insertion_Sort {
 	private void insertionSortV1(int[] array){		
 		for(int i = 1; i < array.length; i++){			
 			for(int j = i; j > 0; j--)				
-				if(array[j-1] > array[j])
+				if(array[j] < array[j - 1])
 					swap(array, j, j-1);	
 				else
 					break;
@@ -59,11 +59,11 @@ public class Insertion_Sort {
 	}
 
 	private void insertionSortV2(int[] array){		
-		for(int i = 1; i < array.length; i++){			
+		for(int i = 1; i < array.length; i++){
 			int item = array[i];
 			int j = i;
 			for( ; j > 0; j--)
-				if(array[j-1] > item)
+				if(item < array[j-1])
 					array[j] = array[j-1];
 				else
 					break;
