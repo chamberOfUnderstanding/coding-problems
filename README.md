@@ -32,5 +32,5 @@ Solutions to coding problems from various sources in Java
 | [Insertion Sort](src/sorting_searching/Insertion_Sort.java)| [1](https://visualgo.net/sorting)|
 | [Selection Sort](src/sorting_searching/Selection_Sort.java)| [1](https://visualgo.net/sorting)|
 | [Merge Sort](src/sorting_searching/Merge_Sort.java)| [1](https://visualgo.net/sorting)|
-| [Heap Sort](src/sorting_searching/Heap_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/HeapSort.html) [2](https://www.geeksforgeeks.org/heap-sort/?ref=lbp) |
-| [Quick Sort](src/sorting_searching/Quick_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html) [2](https://www.geeksforgeeks.org/quick-sort/) |
+| [Heap Sort](src/sorting_searching/Heap_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/HeapSort.html), [2](https://www.geeksforgeeks.org/heap-sort/?ref=lbp) |
+| [Quick Sort](src/sorting_searching/Quick_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html), [2](https://www.geeksforgeeks.org/quick-sort/) |
