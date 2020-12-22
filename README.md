@@ -27,8 +27,10 @@ Solutions to coding problems from various sources in Java
 # Searching & Sorting
 | Problem                                                    |Reference   |
 | ---------------------------------------------------------- |--------------------------------------------------------|
-| [Binary Search](src/sorting_searching/Binary_Search.java)| |
+| [Binary Search](src/sorting_searching/Binary_Search.java)| | |
 | [Bubble Sort](src/sorting_searching/Bubble_Sort.java)| [1](https://visualgo.net/sorting), [2](https://www.cs.umd.edu/class/sum2003/cmsc311/Notes/BitOp/xor.html)|
 | [Insertion Sort](src/sorting_searching/Insertion_Sort.java)| [1](https://visualgo.net/sorting)|
 | [Selection Sort](src/sorting_searching/Selection_Sort.java)| [1](https://visualgo.net/sorting)|
 | [Merge Sort](src/sorting_searching/Merge_Sort.java)| [1](https://visualgo.net/sorting)|
+| [Heap Sort](src/sorting_searching/Heap_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/HeapSort.html) [2](https://www.geeksforgeeks.org/heap-sort/?ref=lbp) |
+| [Quick Sort](src/sorting_searching/Quick_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html) [2](https://www.geeksforgeeks.org/quick-sort/) |

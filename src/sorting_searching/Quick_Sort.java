@@ -9,8 +9,8 @@ package sorting_searching;
  * 
  * INVARIANT : pivot is in its correct spot and all to its left are < pivot and all to its right are >
  * 
- * Take an item as pivot. After one "partitioning", the pivot will be in the right spot, so all items to
- * its left are < and right are > it.
+ * Take an item as pivot. 
+ * After one "partitioning", the pivot will be in the right spot, so all items to its left are < and right are > it.
  * Hoare partition deals with this logic. 
  * 	First item of the partition is chosen as pivot.
  * 	Scan right until a value > pivot is seen.
