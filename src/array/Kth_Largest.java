@@ -40,7 +40,7 @@ import java.util.PriorityQueue;
  * 
  * METHOD 4 : Print the k largest items in the array
  *            Same as finding the kth largest using a minHeap
- *            After find it, the minHeap needs to be sorted (costing another klogk)
+ *            After finding it, the minHeap needs to be sorted (costing another klogk)
  *             
  * TIME     : O(k +(n-k)logk + klogk)
  * SPACE    : O(k)            
@@ -62,13 +62,17 @@ public class Kth_Largest {
             System.out.println("Invalid value for k");
             System.exit(0);
         }
+        // Prepare minHeap with first k items in the array
         int[] minHeap = new int[k];
         for(int i = 0; i < k; i++)
             minHeap[i] = array[i];
+        // Heapify/sink everything
         for(int i = k / 2; i >= 0; i--)
             sink(minHeap, i, k - 1);
         int i = k;
+        // Scan rest of the elements
         while(i < array.length) {
+        	// Anything larger than the smallest item (root of min heap) ? replace root with it and heapify
             if(array[i] > minHeap[0]) {
                 minHeap[0] = array[i];
                 sink(minHeap, 0, k - 1);
@@ -129,6 +133,8 @@ public class Kth_Largest {
 
     private int findKthLargestUsingSort(int[] array, int k) {       
         boolean swaps = true;
+        // In bubble sort, after i-th iteration, i-th largest will be the last element
+        // Run the bubble sort logic "k" times
         for(int i = 0; i < k && swaps; i++){
             swaps = false;
             for(int j = 0; j < array.length - i - 1; j++)

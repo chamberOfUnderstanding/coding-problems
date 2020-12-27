@@ -34,3 +34,11 @@ Solutions to coding problems from various sources in Java
 | [Merge Sort](src/sorting_searching/Merge_Sort.java)| [1](https://visualgo.net/sorting)|
 | [Heap Sort](src/sorting_searching/Heap_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/HeapSort.html), [2](https://www.geeksforgeeks.org/heap-sort/?ref=lbp) |
 | [Quick Sort](src/sorting_searching/Quick_Sort.java)| [1](https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html), [2](https://www.geeksforgeeks.org/quick-sort/) |
+| [Knuth Shuffle](src/sorting_searching/Knuth_Shuffle.java)| | 
+| [Shell Sort](src/sorting_searching/Shell_Sort.java)| [1](https://www.geeksforgeeks.org/shellsort/)| 
+| [Quick Sort 3 Way Partition](src/sorting_searching/Quick_Sort_Three_Way_Partition.java)| |
+
+# Trees
+| Problem                                                    |Reference   |
+| ---------------------------------------------------------- |--------------------------------------------------------|
+| [Inorder Traversal](src/tree/traversal/Inorder_Traversal.java)| [1](http://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/ |

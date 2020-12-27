@@ -7,6 +7,8 @@ import java.util.Stack;
  * 
  * Inorder traverse a binary tree
  * 
+ * Left -> Root -> Right
+ * 
  * http://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
  * 
  * ====================

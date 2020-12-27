@@ -2,22 +2,24 @@ package sorting_searching;
 
 public class Shell_Sort {
 
-	/* h sort the array
+	/* Variation of insertion sort. In, insertion sort, far off elements require multiple movements as the elements are moved only one position ahead.
+	 * Here, "h" is maintained as a "gap" for moving elements. h is reduced after every pass.
+	 * h sort the array
 	 * h=1 => Insertion sort
 	 * Value of h is a value in the sequence 3x+1 such that it is less than length of array/3
 	 * Decrement by h
 	 */
 	public static void shellSort(int[] a){
 		int h = 1;
-		while(h<a.length/3)
-			h=3*h+1;
-		while(h>=1){
-			for(int i=h;i<a.length;i++){			
-				for(int j=i;j>=h;j-=h)				
-					if(a[j-1]>a[j])
+		while(h < a.length/3)
+			h = 3*h + 1;
+		while(h >= 1){
+			for(int i = h;i < a.length;i++){			
+				for(int j = i;j >= h; j-=h)				
+					if(a[j - 1] > a[j])
 						swap(a, j, j-h);
 			}
-			h/=3;
+			h /= 3;
 		}
 	}
 	private static void swap(int[] a, int j, int i) {

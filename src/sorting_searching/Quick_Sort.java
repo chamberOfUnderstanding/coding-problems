@@ -13,7 +13,6 @@ package sorting_searching;
  * After one "partitioning", the pivot will be in the right spot, so all items to its left are < and right are > it.
  * Hoare partition deals with this logic. 
  * 	First item of the partition is chosen as pivot.
- * 	Scan right until a value > pivot is seen.
  * 	Scan left until a value < pivot is seen.
  * 	If the indices cross, return right index.
  * 	Else swap the items at these indices
@@ -45,7 +44,9 @@ public class Quick_Sort {
         int leftIndex = low - 1;
         int rightIndex = high + 1;
         while(true){
+        	// Scan to the right until a value > pivot is seen. 
             while(array[++leftIndex] < pivot);
+            // Scan to the left until a value < pivot is seen. 
             while(array[--rightIndex] > pivot);
             if(leftIndex >= rightIndex)
                 return rightIndex;

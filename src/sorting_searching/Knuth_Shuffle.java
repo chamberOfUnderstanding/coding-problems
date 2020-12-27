@@ -6,6 +6,7 @@ public class Knuth_Shuffle {
 
 	private static void knuthShuffle(int[] array) {
 		for(int i = 0; i < array.length; i++)
+			// Swap item at index i with the item at a random index between 0 and i
 			swap(array, i, new Random().nextInt(i+1));	
 	}
 

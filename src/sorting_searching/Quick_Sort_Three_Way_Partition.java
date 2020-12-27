@@ -38,20 +38,20 @@ public class Quick_Sort_Three_Way_Partition {
 
 	private static void quickSortThreeWayPartition(int[] array, int low, int high) {
 		if(low < high){
-			int less_than    = low;
-			int greater_than = high;
 			int pivot = array[low];
+			int lesser  = low;
+			int greater = high;
 			int index = low;
-			while(index <= greater_than){
+			while(index <= greater){
 				int comparison = compare(array[index], pivot);
 				switch(comparison){
-					case -1 : swap(array, less_than++, index++);  break;
+					case -1 : swap(array, lesser++, index++);  break;
 					case  0 : index++; break;
-					case  1 : swap(array, index, greater_than--); break;
+					case  1 : swap(array, index, greater--); break;
 				}
 			}
-			quickSortThreeWayPartition(array, low, less_than - 1);
-			quickSortThreeWayPartition(array, greater_than + 1, high);
+			quickSortThreeWayPartition(array, low, lesser - 1);
+			quickSortThreeWayPartition(array, greater + 1, high);
 		}
 	}
 
