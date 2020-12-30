@@ -48,22 +48,27 @@ public class Boundary_Traversal {
         boundaryTraversal(node30);
     }
 
+    // Anti clockwise printing, therefore visit LST first
     private static void boundaryTraversal(Node root) {
         System.out.print(root.data + " ");
-        printLeft(root.left, true);
-        printRight(root.right, true);
+        leftSubTree(root.left, true);
+        rightSubTree(root.right, true);
     }
 
-    private static void printLeft(Node node, boolean print) {
+    // Prints all left child nodes in the boundary along with any left/right child leaf nodes
+    private static void leftSubTree(Node node, boolean print) {
         if(node != null){
             if(print || isLeaf(node))
                 System.out.print(node.data + " ");
             printLeft(node.left, true);
+            // Print the right child ONLY IF it is a leaf
             printLeft(node.right, false);
         }
     }
 
-    private static void printRight(Node node, boolean print) {
+    // Prints all right child nodes in the boundary along with any left/right child leaf nodes
+    // Since anti clockwise pattern is required, visit left then right and then print
+    private static void rightSubTree(Node node, boolean print) {
         if(node != null){
             printRight(node.left, false);
             printRight(node.right, true);
