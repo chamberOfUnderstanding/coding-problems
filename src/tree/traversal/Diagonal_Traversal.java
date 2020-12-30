@@ -31,10 +31,6 @@ import java.util.Queue;
  * METHOD 1 : Preorder Traversal
  * =============================
  * Same as vertical traversal.
- * Maintain a map that relates a diagonal to the list of elements in the diagonal
- * Root is in diagonal 0
- * The right children lie on the same diagonal as the parent (So retain the diagonal value when recursing for the RST)
- * The left children lie on the diagonal below the parent's diagonal (So update the diagonal value when recursing for the LST)
  * 
  * TIME     : O(n)
  * SPACE    : O(n)
@@ -76,7 +72,9 @@ public class Diagonal_Traversal {
     }
 
     private static void diagonalTraversal(Node root) {
+        // Maintain a map that relates a diagonal to the list of elements in the diagonal
         Map<Integer, List<Integer>> diagonalTraversal = new HashMap<>();
+        // Root is in diagonal 0
         diagonalTraversal(0, root, diagonalTraversal);
         System.out.println(diagonalTraversal);
     }
@@ -84,12 +82,20 @@ public class Diagonal_Traversal {
     private static void diagonalTraversal(int diagonal, Node node, Map<Integer, List<Integer>> diagonalTraversal) {
         if(node == null)
             return;
+        
+        // If the diagonal data for this level is available, add this node to it, else add it to a new list
         List<Integer> diagonalLevel = diagonalTraversal.get(diagonal);
         if(diagonalLevel == null)
             diagonalLevel = new ArrayList<>();
         diagonalLevel.add(node.data);
+        
+        // Update the map
         diagonalTraversal.put(diagonal, diagonalLevel);
+       
+        // The left children lie on the diagonal below the parent's diagonal. Hence update the diagonal value when recursing for the LST.
         diagonalTraversal(diagonal - 1, node.left, diagonalTraversal);
+        
+        // The right children lie on the same diagonal as the parent. Hence retain the diagonal value when recursing for the RST.
         diagonalTraversal(diagonal, node.right, diagonalTraversal);
     }
 
@@ -97,13 +103,15 @@ public class Diagonal_Traversal {
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()) {
+            // This will have count of items falling in one diagonal
             int nodeCount = queue.size();
             while(nodeCount-- > 0) {
                 Node node = queue.remove();
                 while(node != null) {
                     System.out.print(node.data + " ");
+                    // Enqueue only the left child as it falls in another diagonal
                     if(node.left != null)
-                        queue.add(node.left);
+                        queue.add(node.left);                    
                     node = node.right;
                 }
             }
