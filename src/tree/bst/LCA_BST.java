@@ -9,12 +9,8 @@ package tree.bst;
  * ====================
  * METHOD 1 : Recursive
  * ==================== 
- * If both data is greater than the root's data then LCA is in the right subtree as we need to find a larger value
- * If both data is less than the root's data then LCA is in the right subtree as we need to find a smaller value
- * If the node's data is in between the two data, then that's the LCA
  *             
- * TIME    : O(n)
- * SPACE   : O(h)
+
  * 
  * ====================
  * METHOD 2 : Iterative
@@ -34,6 +30,13 @@ package tree.bst;
 public class LCA_BST{	
 	
 	public static void main(String[] args) {
+		/*
+		 *              10
+		 *           /     \
+		 *          2      15
+		 *           \    /  \
+		 *            5  12  27
+		 */
 		Node node5 = new Node(5);
 		Node node12 = new Node(12); 
 		Node node27 = new Node(27);
@@ -41,15 +44,23 @@ public class LCA_BST{
 		Node node2 = new Node(null, 2, node5);
 		Node node10 = new Node(node2, 10, node15);
 		
-		System.out.println("Recursive method : " + lcaBSTRecursive(node10, 2, 27).data);
-		System.out.println("Iterative method : " + lcaBSTIterative(node10, 2, 27).data);
+		System.out.println("Recursive method : " + lcaBSTRecursive(node10, 12, 27).data);
+		System.out.println("Iterative method : " + lcaBSTIterative(node10, 12, 27).data);
 	}
 	
+	/*
+	 * TIME    : O(n)
+	 * SPACE   : O(h)
+	 */
 	static Node lcaBSTRecursive(Node node, int data1, int data2) {
 		if(node == null)
 			return null;
+		
+		// If both data is greater than the root's data then LCA is in the RST as we need a larger value
 		if(data1 > node.data && data2 > node.data)			
 			return lcaBSTRecursive(node.right, data1, data2);
+		
+		// Else if both data is smaller than the root's data then LCA is in the LST as we need a smaller value
 		else if(data1 < node.data && data2 < node.data)
 			return lcaBSTRecursive(node.left, data1, data2);
 		return node;

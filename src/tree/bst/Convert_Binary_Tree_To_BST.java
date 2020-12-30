@@ -67,14 +67,19 @@ public class Convert_Binary_Tree_To_BST {
         return root;
     }
 
-    private static void convertBinaryTreeToBST(Node node, List<Integer> data, boolean isExtractionProcess){
+    private static void convertBinaryTreeToBST(Node node, List<Integer> data, boolean extract){
+    	// Basic inorder traversal
         if(node != null){
-            convertBinaryTreeToBST(node.left, data, isExtractionProcess);
-            if(isExtractionProcess)
+            convertBinaryTreeToBST(node.left, data, extract);
+            
+            // If data is to be extracted, record it in the list
+            if(extract)
                 data.add(node.data);
+            
+            // Else update the node's data with that on the list top
             else
                 node.data = data.remove(0);
-            convertBinaryTreeToBST(node.right, data, isExtractionProcess);
+            convertBinaryTreeToBST(node.right, data, extract);
         }
     }
 

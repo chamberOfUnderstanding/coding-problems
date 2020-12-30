@@ -68,49 +68,70 @@ public class BST_Sum_Pair{
 	}
 
 	private static boolean detectSumPair(Node root, int targetSum) {
-		boolean fetchInorderNode = true;
-		boolean fetchReverseInorderNode = true;
-		Node inorderNode = root;
-		Node reverseInorderNode = root;
-		Stack<Node> inorderStack = new Stack<>();
-		Stack<Node> reverseInorderStack = new Stack<>();
-		int detectedSum = 0;
-		int inorderData = 0;
-		int reverseInorderData = 0;
+		
+		boolean i_flag = true;
+		Node i_node = root;
+		Stack<Node> i_stack = new Stack<>();
+		int i_data = 0;
+
+		boolean ri_flag = true;
+		Node ri_node = root;
+		Stack<Node> ri_stack = new Stack<>();
+		int ri_data = 0;
+		
+		int sum = 0;
+		
 		while(true){
-			while(fetchInorderNode){
-				if(null != inorderNode){					
-					inorderStack.push(inorderNode);
-					inorderNode = inorderNode.left;
+			
+			// Fetch next inorder node
+			while(i_flag){
+				
+				// Valid node
+				// Push it onto stack and move left
+				// This repeats until LST is stacked
+				if(null != i_node){					
+					i_stack.push(i_node);
+					i_node = i_node.left;
 				}
+				
+				// Invalid node
+				// Pop stack to get the largest among the LST (great parent or whatever, the top most)
+				// Record the data and move right to find the successor
+				// Turn off the flag for the sum check
 				else{
-					inorderNode = inorderStack.pop();
-					inorderData = inorderNode.data;
-					inorderNode = inorderNode.right;
-					fetchInorderNode = false;
-				}		
+					i_node = i_stack.pop();
+					i_data = i_node.data;
+					i_node = i_node.right;
+					i_flag = false;
+				}
 			}
-			while(fetchReverseInorderNode){
-				if(null != reverseInorderNode){
-					reverseInorderStack.push(reverseInorderNode);
-					reverseInorderNode = reverseInorderNode.right;
+			
+			// Fetch next reverse inorder node
+			while(ri_flag){
+				if(null != ri_node){
+					ri_stack.push(ri_node);
+					ri_node = ri_node.right;
 				}
 				else{
-					reverseInorderNode = reverseInorderStack.pop();
-					reverseInorderData = reverseInorderNode.data;
-					reverseInorderNode = reverseInorderNode.left;
-					fetchReverseInorderNode = false;
+					ri_node = ri_stack.pop();
+					ri_data = ri_node.data;
+					ri_node = ri_node.left;
+					ri_flag = false;
 				}			
 			}
-			if(inorderData >= reverseInorderData)
+			if(i_data >= ri_data)
 				return false;
-			detectedSum = inorderData + reverseInorderData;
-			if(detectedSum == targetSum)
+			sum = i_data + ri_data;
+			if(sum == targetSum)
 				return true;
-			else if(detectedSum < targetSum)
-				fetchInorderNode = true;
+			
+			// Need a higher value, so next inorder node
+			else if(sum < targetSum)
+				i_flag = true;
+			
+			// Need a smaller value, so next reverse inorder node
 			else
-				fetchReverseInorderNode = true;		
+				ri_flag = true;		
 		}
 	}
 

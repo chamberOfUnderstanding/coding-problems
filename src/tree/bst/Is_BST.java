@@ -51,7 +51,8 @@ public class Is_BST {
 		Node node3 = new Node(node6, 3, node7);
 		Node node2 = new Node(node4, 2, node5);
 		Node root = new Node(node2, 1, node3);
-		System.out.println(isBST(root)? "Yes this is a BST" : "Nope!");
+		System.out.println("Iterative " + isBST(root));
+		System.out.println("Recursive " + isBSTRecursive(root));
 	}
 
 	static boolean isBST(Node root) {
@@ -75,11 +76,11 @@ public class Is_BST {
 		inorderTraversal(node.right,inorderList);
 	}
 
-	boolean isBSTRecursive(Node root) {      
+	static boolean isBSTRecursive(Node root) {      
 		return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
 	}
 
-	boolean isBST(Node node, int minimumValue, int maximumValue){
+	static boolean isBST(Node node, int minimumValue, int maximumValue){
 		return  node == null ||
 		        minimumValue < node.data &&
 		        node.data < maximumValue &&

@@ -11,30 +11,6 @@ package tree.bst;
  * ===================================
  * METHOD 1 : Recursion + Data sharing
  * ===================================
- * For each node we need to keep track of the following :
- *	Whether the sub tree rooted at this node is a bst (isBST)
- *	The minimum value on the LST (min)
- *	The maximum value on the RST (max)
- *	The size of the BST (size)
- * This information is shared between the nodes (from leaves to root).
- * Default data would be (if the node is null) :
- *	true for isBST 
- *	  : As a leaf node is a BST
- *	min = MAX_VALUE 
- *	  : As this node is expected to have a larger value to everything on the left child of this node's parent (including the parent)
- *	    Giving it the highest value will ensure it's always greater for a leaf
- *	max = MIN_VALUE
- *	  : Same as above, but this time this value needs to be smaller than everything to the right of the parent (including parent)
- *	size = 0
- *	  : It's a null node, I mean there's no tree!
- * Now if the node is null, return the default data
- * Else find the largest BST in both lst and rst
- *  If both lst and rst are BST and this node's value lies between lst max and rst min, then this node is also included in the bst
- *	New size would be sum of lst and rst sizes + 1 (this node)
- *	Minimum of this node would be this node's data (if it has no left) else lst's min
- *	Maximum of this node would be this node's data (if it has no right) else rst's max
- *  If this node does not form a bst with lst and rst, then size = max of lst and rst sizes
- *
  * TIME     : O(n)
  * SPACE    : O(1)
  *
@@ -52,16 +28,27 @@ public class Largest_Subtree_That_Is_BST {
     }
 
     public static Data largestBST(Node node){
+    	
+    	// Default data is returned if node is null
         Data data = new Data();
+        
         if(node != null){
+        	// Prepare the data for LST and RST
             Data lst = largestBST(node.left);
             Data rst = largestBST(node.right);
+            
+            // Current node is a BST if both LST and RST are BST AND current node's data is between LST max and RST min
             data.isBST = lst.isBST &&
                          rst.isBST &&
                          lst.max < node.data &&
                          node.data < rst.min;
+            
+            // If current node is not a part of a BST, then size is the largest among the subtrees
             if(!data.isBST)
                 data.size = Math.max(lst.size, rst.size);
+            
+            // Else add the current node to the size
+            // Update the current node's min and max
             else{
                 data.size = lst.size + 1 + rst.size;
                 data.min = node.left == null? node.data : lst.min;
@@ -71,16 +58,35 @@ public class Largest_Subtree_That_Is_BST {
         return data;
     }
 
+    /**
+     * This information is maintained for each node.
+     */
     public static class Data{
+    	
+    	// Whether the sub tree rooted at this node is a BST (isBST)
         boolean isBST;
+
+        // The minimum value on the LST (min)
         int min;
+        
+        // The maximum value on the RST (max)
         int max;
+        
+        // The size of the BST
         int size;
 
         Data(){
+
+        	// true for a no tree case
             this.isBST = true;
+            
+            // Default is MAX_VALUE as everything is smaller than this 
             this.min = Integer.MAX_VALUE;
+            
+            // Default is MIN_Value as everything is larger than this
             this.max = Integer.MIN_VALUE;
+            
+            // 0 for no tree
             this.size = 0;
         }
 

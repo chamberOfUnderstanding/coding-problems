@@ -60,9 +60,9 @@ public class Boundary_Traversal {
         if(node != null){
             if(print || isLeaf(node))
                 System.out.print(node.data + " ");
-            printLeft(node.left, true);
+            leftSubTree(node.left, true);
             // Print the right child ONLY IF it is a leaf
-            printLeft(node.right, false);
+            leftSubTree(node.right, false);
         }
     }
 
@@ -70,8 +70,8 @@ public class Boundary_Traversal {
     // Since anti clockwise pattern is required, visit left then right and then print
     private static void rightSubTree(Node node, boolean print) {
         if(node != null){
-            printRight(node.left, false);
-            printRight(node.right, true);
+        	rightSubTree(node.left, false);
+        	rightSubTree(node.right, true);
             if(print || isLeaf(node))
                 System.out.print(node.data + " ");
         }

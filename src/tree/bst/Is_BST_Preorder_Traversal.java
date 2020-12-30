@@ -49,17 +49,21 @@ public class Is_BST_Preorder_Traversal {
 	public static void main(String[] strings) {
 		int[] preorderTraversal = {5, 3, 1, 4, 9, 15};
 
-		System.out.print("This is ");
-		System.out.print(isBSTPreorderTraversal(preorderTraversal)? "a valid " : "an invalid ");
-		System.out.println("BST preorder traversal");
+		System.out.print(isBSTPreorderTraversal(preorderTraversal));
 	}
 
 	public static boolean isBSTPreorderTraversal(int[] preorderTraversal){
 		Stack<Integer> stack = new Stack<Integer>();
+		
+		// No node should have a value < this
 		int minimum = Integer.MIN_VALUE;
 		for (int i = 0; i < preorderTraversal.length; i++){
 			if (preorderTraversal[i] < minimum)
 				return false;
+			
+			// Repeatedly pop the stack as long as current element is > stack top
+			// Pop-ed element is the current "minimum"
+			// Again, no element in the preorder traversal can be smaller than this "minimum"
 			while(!stack.isEmpty() && preorderTraversal[i] >= stack.peek())
 				minimum = stack.pop();
 			stack.push(preorderTraversal[i]);

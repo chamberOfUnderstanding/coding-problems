@@ -33,12 +33,21 @@ public class BST_From_SortedArray {
     }
 
     private static Node prepareBST(int low, int high, int[] array) {
+    	// Null if limits cross (leaf nodes)
         if(low > high)
             return null;
+        
+        // Make a node out of the middle element
         int middle = (low + high) >> 1;
         Node node  = new Node(array[middle]);
+        
+        // Middle of the left sub tree will be the left child
         node.left  = prepareBST(low, middle - 1, array);
+        
+        // Middle of the right sub tree will be the right child
         node.right = prepareBST(middle + 1, high, array);
+        
+        // Return the new node
         return node;
     }
 

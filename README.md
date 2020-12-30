@@ -38,7 +38,7 @@ Solutions to coding problems from various sources in Java
 | [Shell Sort](src/sorting_searching/Shell_Sort.java)| [1](https://www.geeksforgeeks.org/shellsort/)| 
 | [Quick Sort 3 Way Partition](src/sorting_searching/Quick_Sort_Three_Way_Partition.java)| |
 
-# Trees
+# Tree Traversal
 | Problem                                                    |Reference   |
 | ---------------------------------------------------------- |--------------------------------------------------------|
 | [Inorder Traversal](src/tree/traversal/Inorder_Traversal.java)| [1](http://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/) |
@@ -50,3 +50,14 @@ Solutions to coding problems from various sources in Java
 | [Level Order Traversal](src/tree/traversal/Level_Order_Traversal.java)| [1](http://www.geeksforgeeks.org/level-order-tree-traversal/)
 | [Reverse Level Order Traversal](src/tree/traversal/Level_Order_Traversal_Reverse.java)| [1](https://www.geeksforgeeks.org/reverse-level-order-traversal/)|
 | [Spiral Level Order Traversal](src/tree/traversal/Level_Order_Traversal_Spiral.java)| [1](http://www.geeksforgeeks.org/level-order-traversal-in-spiral-form/)|
+
+# Binary Search Tree
+| Problem | Reference |
+| --------|-----------|
+|[Check if the tree is a BST](src/tree/bst/Is_BST.java)|[1](https://www.hackerrank.com/challenges/is-binary-search-tree)|
+|[Prepare a BST from a sorted array](src/tree/bst/BST_From_SortedArray.java)|[1](http://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)|
+|[Pair of nodes that give the target sum](src/tree/bst/BST_Sum_Pair.java)||
+|[Largest sub tree that is a BST](src/tree/bst/Largest_Subtree_That_Is_BST)|[1](https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/LargestBSTInBinaryTree.java), [2](http://www.geeksforgeeks.org/find-the-largest-subtree-in-a-tree-that-is-also-a-bst/)|
+|[LCA of given nodes in a BST](src/tree/bst/LCA_BST)||
+|[Binary tree to BST conversion](src/tree/bst/Convert_Binary_Tree_To_BST)|[1](http://www.geeksforgeeks.org/binary-tree-to-binary-search-tree-conversion/)|
+|[Check if the array is a BST preorder traversal](src/tree/bst/Is_BST_Preorder_Traversal)|[1](http://www.geeksforgeeks.org/check-if-a-given-array-can-represent-preorder-traversal-of-binary-search-tree/)|

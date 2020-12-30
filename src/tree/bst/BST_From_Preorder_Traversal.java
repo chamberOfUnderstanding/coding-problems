@@ -12,8 +12,7 @@ import java.util.Stack;
  * ================
  * METHOD 1 : Stack
  * ================
- * In preorder traversal, first item is the root, so make a node out of the first item and set it as the root
- * Push root into stack
+ * 
  * For each item in the preorder traversal array
  *   If this item is < stack top
  *       Make this item the left child of the stack top
@@ -39,16 +38,27 @@ public class BST_From_Preorder_Traversal {
 
     private static Node constructBST(int[] preorder) {
         Stack<Node> stack = new Stack<>();
+        
+        // In preorder traversal, first item is the root, so make a node out of the first item and set it as the root
         Node root = new Node(preorder[0]);
+        
+        // Push the root onto stack
         stack.push(root);
         int i = 0;
         while(++i < preorder.length) {
+        	
+        	// Make a node out of the element
             Node newNode = new Node(preorder[i]);
+            
+            // If it's < stack top, the it is a left child of stack top
             if(preorder[i] < stack.peek().data)
                 stack.peek().left = newNode;
+            
+            // Else, pop till you find an element on stack that's > preorder[i]
+            // This becomes the right child of the stack top
             else {
                 Node lastPopped = null;
-                while(!stack.isEmpty() && preorder[i] > stack.peek().data)
+                while(!stack.isEmpty() && stack.peek().data < preorder[i])
                     lastPopped = stack.pop();
                 lastPopped.right = newNode;
             }
