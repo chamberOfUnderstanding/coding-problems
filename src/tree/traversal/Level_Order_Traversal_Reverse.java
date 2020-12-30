@@ -74,10 +74,12 @@ public class Level_Order_Traversal_Reverse {
             while(!queue.isEmpty()){
                 Node node = queue.remove();
                 System.out.print(node.data + " ");
-                if(node.left != null)
-                    queue.add(node.left);
+                // Visit right first to preserve the reverse order in stack.
+                // It does not matter to the queue as it'll still visit all nodes in the level.
                 if(node.right != null)
                     queue.add(node.right);
+                if(node.left != null)
+                    queue.add(node.left);
             } 
         }       
     }
