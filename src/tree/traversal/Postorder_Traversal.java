@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author 47un
  * 
  * Postorder traverse a given binary tree
- * Postorder traversal is Left -> Right -> Root (Parent)
+ * Postorder traversal is Left -> Right -> Parent
  *
  * http://www.geeksforgeeks.org/iterative-postorder-traversal/
  * http://www.geeksforgeeks.org/iterative-postorder-traversal-using-stack/
@@ -116,19 +116,22 @@ public class Postorder_Traversal {
 	private static void iterativePostorderTraversalTwoStacks(Node root) {
 		if(root == null)
 			return;
-		Stack<Node> stack1 = new Stack<>();
-		Stack<Node> stack2 = new Stack<>();
-		stack1.push(root);
-		while(!stack1.isEmpty()){
-			Node parent = stack1.pop();
-			stack2.push(parent);
+		Stack<Node> toProcess = new Stack<>();
+		Stack<Node> postOrder = new Stack<>();
+		toProcess.push(root);
+		while(!toProcess.isEmpty()){
+			Node parent = toProcess.pop();
+			// Parent node is visited in the end, so it goes straight to the post order stack
+			postOrder.push(parent);
+			// Left before right on a stack gives right first when popping
 			if(parent.left != null)
-				stack1.push(parent.left);
+				toProcess.push(parent.left);
 			if(parent.right != null)
-				stack1.push(parent.right);
+				toProcess.push(parent.right);
 		}
-		while(!stack2.isEmpty())
-			System.out.print(stack2.pop().data + " ");
+		// Stack top has the first item in post order
+		while(!postOrder.isEmpty())
+			System.out.print(postOrder.pop().data + " ");
 	}
 
 	private static void iterativePostorderTraversalOneStack(Node root) {
@@ -138,6 +141,7 @@ public class Postorder_Traversal {
 		stack.push(root);
 		Node node = root;
 		while(true) {
+			// Parent will be in the middle
 			while(node != null) {
 				if(node.right != null)
 					stack.push(node.right);
@@ -147,11 +151,16 @@ public class Postorder_Traversal {
 			node = stack.pop();
 			if(stack.isEmpty())
 				break;
+			// If this is the parent node and the stack has the right child of this node, pop the right child from stack
+			// Parent is pushed back in as it needs to be processed AFTER the right child has been processed
+			// Move right and repeat the steps to process the right child
 			if(node.right != null && stack.peek() == node.right) {
 				stack.pop();
 				stack.push(node);
 				node = node.right;
 			}
+			// If it's the left child, print it
+			// Set node to null to ensure the stack top is picked up for next iteration
 			else {
 				System.out.print(node.data + " ");
 				node = null;
