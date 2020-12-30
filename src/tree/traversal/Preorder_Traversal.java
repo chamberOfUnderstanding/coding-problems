@@ -48,7 +48,9 @@ public class Preorder_Traversal {
         Node node = null;
         while(!stack.isEmpty()){
             node = stack.pop();
+            // Visit parent
             System.out.print(node.data + " ");
+            // Right should come AFTER left, so push right in first
             if(node.right != null)
                 stack.push(node.right);
             if(node.left != null)
