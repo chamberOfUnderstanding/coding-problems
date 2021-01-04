@@ -1,5 +1,4 @@
 # Java Problems
-Solutions to coding problems from various sources in Java
 
 # Arrays
 
@@ -57,7 +56,13 @@ Solutions to coding problems from various sources in Java
 |[Check if the tree is a BST](src/tree/bst/Is_BST.java)|[1](https://www.hackerrank.com/challenges/is-binary-search-tree)|
 |[Prepare a BST from a sorted array](src/tree/bst/BST_From_SortedArray.java)|[1](http://www.geeksforgeeks.org/sorted-array-to-balanced-bst/)|
 |[Pair of nodes that give the target sum](src/tree/bst/BST_Sum_Pair.java)||
-|[Largest sub tree that is a BST](src/tree/bst/Largest_Subtree_That_Is_BST)|[1](https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/LargestBSTInBinaryTree.java), [2](http://www.geeksforgeeks.org/find-the-largest-subtree-in-a-tree-that-is-also-a-bst/)|
-|[LCA of given nodes in a BST](src/tree/bst/LCA_BST)||
-|[Binary tree to BST conversion](src/tree/bst/Convert_Binary_Tree_To_BST)|[1](http://www.geeksforgeeks.org/binary-tree-to-binary-search-tree-conversion/)|
-|[Check if the array is a BST preorder traversal](src/tree/bst/Is_BST_Preorder_Traversal)|[1](http://www.geeksforgeeks.org/check-if-a-given-array-can-represent-preorder-traversal-of-binary-search-tree/)|
+|[Largest sub tree that is a BST](src/tree/bst/Largest_Subtree_That_Is_BST.java)|[1](https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/LargestBSTInBinaryTree.java), [2](http://www.geeksforgeeks.org/find-the-largest-subtree-in-a-tree-that-is-also-a-bst/)|
+|[LCA of given nodes in a BST](src/tree/bst/LCA_BST.java)||
+|[Binary tree to BST conversion](src/tree/bst/Convert_Binary_Tree_To_BST.java)|[1](http://www.geeksforgeeks.org/binary-tree-to-binary-search-tree-conversion/)|
+|[Check if the array is a BST preorder traversal](src/tree/bst/Is_BST_Preorder_Traversal.java)|[1](http://www.geeksforgeeks.org/check-if-a-given-array-can-represent-preorder-traversal-of-binary-search-tree/)|
+|[Construct a BST from its preorder traversal](src/tree/bst/BST_From_Preorder_Traversal.java)|[1](http://www.geeksforgeeks.org/construct-bst-from-given-preorder-traversa/)|
+
+# Stack
+| Problem | Reference |
+|---------|-----------|
+|[Paranthesis balance check](src/stack/Balanced_Paranthesis.java)|[1](http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)|

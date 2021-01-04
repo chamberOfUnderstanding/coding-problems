@@ -40,17 +40,22 @@ public class Balanced_Paranthesis {
     }
 
     private boolean isBalanced(String expression) {
+    	
+    	// Odd length sequence is not balanced, duh
 		if (expression.length() % 2 != 0) {
 			return false;
 		}
         Stack<Character> stack = new Stack<Character>();		
         for(Character character : expression.toCharArray()){
             switch(character){
+            // Push all opening brackets
             case '(' :
             case '{' :
             case '[' :
                 stack.push(character);
                 break;
+            // For closing brackets, check if the stack has a matching opening bracket    
+            // If it matches, pop that bracket as it's been verified    
             case ')' :
             case '}' :
             case ']' : 
