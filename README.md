@@ -12,6 +12,7 @@
 | [Find the number of times a sorted array has been rotated](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
 | [Find K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://practice.geeksforgeeks.org/problems/first-k-natural-numbers2135/1#)|
 | [Find Kth largest/smallest number](src/array/Kth_Largest.java)|[1](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)|
+| [All element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
 
 # Backtracking
 
