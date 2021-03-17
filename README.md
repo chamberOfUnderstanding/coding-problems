@@ -37,6 +37,7 @@
 | [Knuth Shuffle](src/sorting_searching/Knuth_Shuffle.java)| | 
 | [Shell Sort](src/sorting_searching/Shell_Sort.java)| [1](https://www.geeksforgeeks.org/shellsort/)| 
 | [Quick Sort 3 Way Partition](src/sorting_searching/Quick_Sort_Three_Way_Partition.java)| |
+| [Dense Ranking](src/sorting_searching/Dense_Ranking.java)|[1](https://www.hackerrank.com/challenges/climbing-the-leaderboard/problem) |
 
 # Tree Traversal
 | Problem                                                    |Reference   |
