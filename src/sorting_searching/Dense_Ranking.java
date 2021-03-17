@@ -21,7 +21,7 @@ public class Dense_Ranking {
 	}
 
 	/**
-	 * T O(r) + O(r * log(p))
+	 * T O(r) + O(p * log(r))
 	 * S O(r)
 	 */
 	public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> players) {
