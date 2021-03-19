@@ -68,3 +68,8 @@
 | Problem | Reference |
 |---------|-----------|
 |[Paranthesis balance check](src/stack/Balanced_Paranthesis.java)|[1](http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)|
+
+# Dynamic Programming
+| Problem | Reference |
+|---------|-----------|
+|[Longest Common Subsequence](src/dynamic_programming/Longest_Common_Subsequence)|[1](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem),[2](http://www.geeksforgeeks.org/printing-longest-common-subsequence/),[3](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence/)|
