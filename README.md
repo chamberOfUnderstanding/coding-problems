@@ -69,7 +69,14 @@
 |---------|-----------|
 |[Paranthesis balance check](src/stack/Balanced_Paranthesis.java)|[1](http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)|
 
+# String
+| Problem | Reference |
+|---------|-----------|
+|[Lexicographically smallest and largest sub strings of size K](src/string/Lexicographically_Smallest_Substring.java)|[1](https://www.hackerrank.com/challenges/java-string-compare/problem)|
+
 # Dynamic Programming
 | Problem | Reference |
 |---------|-----------|
 |[Longest Common Subsequence](src/dynamic_programming/Longest_Common_Subsequence.java)|[1](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem),[2](http://www.geeksforgeeks.org/printing-longest-common-subsequence/),[3](http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence/)|
+|[Maximize array cost](src/dynamic_programming/Maximize_Array_Cost.java)|[1](https://www.hackerrank.com/challenges/sherlock-and-cost/problem)|
+
