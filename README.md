@@ -2,18 +2,18 @@
 
 # Arrays
 
-| Problem                                                  | Reference   |
+No.| Problem                                                  | Reference   |
 | -------------------------------------------------------- |--------------------------------------------------------|
-| [All element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
-| [Add one to a number represented as an array of digits](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
-| [Add two numbers represented as an array of digits](src/array/Add_Two_Arrays.java) |  |
-| [Print x items from index i](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
-| [Given the cost and distance values is a circular tour possible](src/array/Circular_Tour.java)| [1](http://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/) |
-| [Array index where left sum is equal to right sum](src/array/Equilibrium_Index.java)|[1](http://www.geeksforgeeks.org/equilibrium-index-of-an-array/)|
-| [Find the number of times a sorted array has been rotated](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
-| [Find Kth largest/smallest number](src/array/Kth_Largest.java)|[1](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)|
-| [Find Kth largest in a stream of integers](src/array/Kth_Largest_In_An_Integer_Stream.java)|[1](http://www.geeksforgeeks.org/kth-largest-element-in-a-stream/)|
-| [Find K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://practice.geeksforgeeks.org/problems/first-k-natural-numbers2135/1#)|
+|1| [All element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
+|2| [Add one to a number represented as an array of digits](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
+|3| [Add two numbers represented as an array of digits](src/array/Add_Two_Arrays.java) |  |
+|4| [Print x items from index i](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
+|5| [Given the cost and distance values is a circular tour possible](src/array/Circular_Tour.java)| [1](http://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/) |
+|6| [Array index where left sum is equal to right sum](src/array/Equilibrium_Index.java)|[1](http://www.geeksforgeeks.org/equilibrium-index-of-an-array/)|
+|7| [Find the number of times a sorted array has been rotated](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
+|8| [Find Kth largest/smallest number](src/array/Kth_Largest.java)|[1](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)|
+|9| [Find Kth largest in a stream of integers](src/array/Kth_Largest_In_An_Integer_Stream.java)|[1](http://www.geeksforgeeks.org/kth-largest-element-in-a-stream/)|
+|10| [Find K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://practice.geeksforgeeks.org/problems/first-k-natural-numbers2135/1#)|
 
 
 # Backtracking
