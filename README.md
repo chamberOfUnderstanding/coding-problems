@@ -72,8 +72,8 @@
 |No| Problem | Reference |
 |-|---------|-----------|
 |1|[Paranthesis balance check](src/stack/Balanced_Paranthesis.java)|[1](http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)|
-|2|[Next Greatest Element for each element of an array](src/stack/Next_Greatest_Element)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
-|3|[Next Smallest Element for each element of an array](src/stack/Next_Smallest_Element)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
+|2|[Next Greatest Element for each element of an array](src/stack/Next_Greatest_Element.java)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
+|3|[Next Smallest Element for each element of an array](src/stack/Next_Smallest_Element.java)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
 
 # String
 | Problem | Reference |
