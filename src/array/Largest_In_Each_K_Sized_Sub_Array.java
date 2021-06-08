@@ -82,6 +82,7 @@ public class Largest_In_Each_K_Sized_Sub_Array {
             // Largest in the window will be the first item
             System.out.println(array[dequeue.peekFirst()]);
             // Remaining items from the front can be candidates for the next maxiumum, but exclude those that dont fall in the current window
+            // For i, the very FIRST window that it will be part of will start at i - k
             while(!dequeue.isEmpty() && dequeue.peekFirst() <= i - windowSize)
                 dequeue.removeFirst();
           
