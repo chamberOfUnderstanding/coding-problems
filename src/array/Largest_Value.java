@@ -3,7 +3,7 @@ package array;
 /**
  * @author 47un
  * 
- * In a given array A[] find the maximum value of (A[i] � i) - (A[j] � j) where i is not equal to j.
+ * In a given array A[] find the maximum value of (A[i] - i) - (A[j] - j) where i is not equal to j.
  * i and j vary from 0 to n-1 and N is size of input array A[].  Value of N is always greater than 1.
  * 
  * http://www.geeksforgeeks.org/maximize-value-of-arri-i-arrj-j-in-an-array/
