@@ -1,4 +1,4 @@
-# Java Problems
+# Coding Problems
 
 # Arrays
 
