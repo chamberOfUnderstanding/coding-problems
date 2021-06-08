@@ -3,7 +3,7 @@
 # Arrays
 
 |No.| Problem                                                  | Reference   |
-| -------------------------------------------------------- |--------------------------------------------------------|
+|-|-------------------------------------------------------- |--------------------------------------------------------|
 |1| [All element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
 |2| [Add one to a number represented as an array of digits](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
 |3| [Add two numbers represented as an array of digits](src/array/Add_Two_Arrays.java) |  |
