@@ -72,13 +72,16 @@ public class Largest_In_Each_K_Sized_Sub_Array {
         Deque<Integer> dequeue = new LinkedList<>();
         int i = 0;
         for( ; i < windowSize; i++) {
+            // For input 1,5,7 => Only 7 will be retained
+            // For input 1,7,5 => 7 and 5 will be retained. 5 can be the largest in a window that starts at 5's index           
             while(!dequeue.isEmpty() && array[i] >= array[dequeue.peekLast()])
                 dequeue.removeLast();
             dequeue.offerLast(i);
         }            
         for( ; i < size; i++) {
-          
+            // Largest in the window will be the first item
             System.out.println(array[dequeue.peekFirst()]);
+            // Remaining items from the front can be candidates for the next maxiumum, but exclude those that dont fall in the current window
             while(!dequeue.isEmpty() && dequeue.peekFirst() <= i - windowSize)
                 dequeue.removeFirst();
           
