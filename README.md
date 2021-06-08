@@ -13,14 +13,13 @@
 |7| [Number of times a sorted array has been rotated](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
 |8| [Kth largest/smallest number](src/array/Kth_Largest.java)|[1](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)|
 |9| [Kth largest in a stream of integers](src/array/Kth_Largest_In_An_Integer_Stream.java)|[1](http://www.geeksforgeeks.org/kth-largest-element-in-a-stream/)|
-|10|[K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://practice.geeksforgeeks.org/problems/first-k-natural-numbers2135/1#)|
-|11|[Maximum absolute difference between nearest left and right smallest elements](src/array/Nearest_Difference.java)|[1](http://www.geeksforgeeks.org/find-maximum-difference-between-nearest-left-and-right-smaller-elements/)|
-|12|[Maximum frequency difference of two different elements](src/array/Largest_Frequency_Difference.java)|[1](http://www.geeksforgeeks.org/maximum-difference-between-frequency-of-two-elements-such-that-element-having-greater-frequency-is-also-greater/)|
-|13|[Largest in each K sized sub array](src/array/Largest_In_Each_K_Sized_Sub_Array.java)|[1](https://www.ideserve.co.in/learn/maximum-element-from-each-subarray-of-size-k-set-2)|
-|14|[Maximum(j - i) such that A[j] > A[i]](src/array/Largest_Index_Difference.java)|[1](http://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/)|
-|15|[Maximum(i * A[i]) where i is obtained by rotating the array by one](src/array/Largest_Sum_Configuration.java)|[1](http://www.geeksforgeeks.org/maximum-sum-iarri-among-rotations-given-array/)|
-|16|[Largest contiguous sub array sum](src/array/Largest_Sum_Sub_Array.java)|[1](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)|
-|17|[Maximum((A[i] - i) - (A[j] - j)) where i != j](src/array/Largest_Value.java)|[1](https://www.geeksforgeeks.org/maximize-value-of-arri-i-arrj-j-in-an-array/)|
+|10|[Maximum absolute difference between nearest left and right smallest elements](src/array/Nearest_Difference.java)|[1](http://www.geeksforgeeks.org/find-maximum-difference-between-nearest-left-and-right-smaller-elements/)|
+|11|[Maximum frequency difference of two different elements](src/array/Largest_Frequency_Difference.java)|[1](http://www.geeksforgeeks.org/maximum-difference-between-frequency-of-two-elements-such-that-element-having-greater-frequency-is-also-greater/)|
+|12|[Largest in each K sized sub array](src/array/Largest_In_Each_K_Sized_Sub_Array.java)|[1](https://www.ideserve.co.in/learn/maximum-element-from-each-subarray-of-size-k-set-2)|
+|13|[Maximum(j - i) such that A[j] > A[i]](src/array/Largest_Index_Difference.java)|[1](http://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/)|
+|14|[Maximum(i * A[i]) where i is obtained by rotating the array by one](src/array/Largest_Sum_Configuration.java)|[1](http://www.geeksforgeeks.org/maximum-sum-iarri-among-rotations-given-array/)|
+|15|[Largest contiguous sub array sum](src/array/Largest_Sum_Sub_Array.java)|[1](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)|
+|16|[Maximum((A[i] - i) - (A[j] - j)) where i != j](src/array/Largest_Value.java)|[1](https://www.geeksforgeeks.org/maximize-value-of-arri-i-arrj-j-in-an-array/)|
 
 # Backtracking
 
