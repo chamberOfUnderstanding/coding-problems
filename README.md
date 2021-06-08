@@ -7,7 +7,7 @@
 |1| [Element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
 |2| [Add one to an array of digits](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
 |3| [Add two numbers represented as an array of digits](src/array/Add_Two_Arrays.java) |  |
-|4| [X items from index I](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
+|4| [x items from index i](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
 |5| [Circular tour possiblilty, given the cost and distance](src/array/Circular_Tour.java)| [1](http://www.geeksforgeeks.org/find-a-tour-that-visits-all-stations/) |
 |6| [Array index where left sum is equal to right sum](src/array/Equilibrium_Index.java)|[1](http://www.geeksforgeeks.org/equilibrium-index-of-an-array/)|
 |7| [Number of times a sorted array has been rotated](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
@@ -17,6 +17,10 @@
 |11|[Maximum absolute difference between nearest left and right smallest elements](src/array/Nearest_Difference.java)|[1](http://www.geeksforgeeks.org/find-maximum-difference-between-nearest-left-and-right-smaller-elements/)|
 |12|[Maximum frequency difference of two different elements](src/array/Largest_Frequency_Difference.java)|[1](http://www.geeksforgeeks.org/maximum-difference-between-frequency-of-two-elements-such-that-element-having-greater-frequency-is-also-greater/)|
 |13|[Largest in each K sized sub array](src/array/Largest_In_Each_K_Sized_Sub_Array.java)|[1](https://www.ideserve.co.in/learn/maximum-element-from-each-subarray-of-size-k-set-2)|
+|14|[Maximum(j - i) such that A[j] > A[i]](src/array/Largest_Index_Difference.java)|[1](http://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/)|
+|15|[Maximum(i * A[i]) where i is obtained by rotating the array by one](src/array/Largest_Sum_Configuration.java)|[1](http://www.geeksforgeeks.org/maximum-sum-iarri-among-rotations-given-array/)|
+|16|[Largest contiguos sub array sum](src/array/Largest_Sum_Sub_Array.java)|[1](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)|
+|17|[Maximum((A[i] - i) - (A[j] - j)) where i != to j](src/array/Largest_Value.java)|[1](https://www.geeksforgeeks.org/maximize-value-of-arri-i-arrj-j-in-an-array/)|
 
 # Backtracking
 
