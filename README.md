@@ -19,8 +19,8 @@
 |13|[Largest in each K sized sub array](src/array/Largest_In_Each_K_Sized_Sub_Array.java)|[1](https://www.ideserve.co.in/learn/maximum-element-from-each-subarray-of-size-k-set-2)|
 |14|[Maximum(j - i) such that A[j] > A[i]](src/array/Largest_Index_Difference.java)|[1](http://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/)|
 |15|[Maximum(i * A[i]) where i is obtained by rotating the array by one](src/array/Largest_Sum_Configuration.java)|[1](http://www.geeksforgeeks.org/maximum-sum-iarri-among-rotations-given-array/)|
-|16|[Largest contiguos sub array sum](src/array/Largest_Sum_Sub_Array.java)|[1](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)|
-|17|[Maximum((A[i] - i) - (A[j] - j)) where i != to j](src/array/Largest_Value.java)|[1](https://www.geeksforgeeks.org/maximize-value-of-arri-i-arrj-j-in-an-array/)|
+|16|[Largest contiguous sub array sum](src/array/Largest_Sum_Sub_Array.java)|[1](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)|
+|17|[Maximum((A[i] - i) - (A[j] - j)) where i != j](src/array/Largest_Value.java)|[1](https://www.geeksforgeeks.org/maximize-value-of-arri-i-arrj-j-in-an-array/)|
 
 # Backtracking
 
