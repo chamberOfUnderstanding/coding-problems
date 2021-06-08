@@ -4,7 +4,7 @@
 
 |No.| Problem                                                  | Reference   |
 |-|-------------------------------------------------------- |--------------------------------------------------------|
-|1| [Element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
+|1| [Pairs with the given absolute difference](src/array/Absolute_Difference.java)||
 |2| [Add one to an array of digits](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
 |3| [Add two numbers represented as an array of digits](src/array/Add_Two_Arrays.java) |  |
 |4| [x items from index i](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
