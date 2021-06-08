@@ -74,12 +74,19 @@ public class Largest_Sum_Sub_Array {
         int max = array[0];
         int startingIndex = 0;
         int endingIndex = 0; 
-        for(int i = 1; i < array.length; i++){	
+        for(int i = 1; i < array.length; i++){
+            // if array[i] is better than the sum, then starting and ending is i
+            if (array[i] > sum) {
+            	startingIndex = endingIndex = i;
+            }
+            // if array[i] + sum is better than the sum, then the ending is i
+            else if (array[i] + sum > sum) {
+            	endingIndex = i;
+            }
+            // use array[i] as is if it is > sum + array[i]
             sum = Math.max(sum + array[i], array[i]);
+            // update max
             max = Math.max(max, sum);
-            if(sum == array[i])
-                startingIndex = i;
-            endingIndex = i;
         }
         System.out.println("Starts at "+ startingIndex + "\nEnds at " + endingIndex);
         return max;
