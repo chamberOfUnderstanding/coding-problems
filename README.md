@@ -4,6 +4,7 @@
 
 | Problem                                                  | Reference   |
 | -------------------------------------------------------- |--------------------------------------------------------|
+| [All element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
 | [Add one to a number represented as an array of digits](src/array/Add_One_To_An_Array.java) | [1](http://codereview.stackexchange.com/questions/43343/add-one-to-a-number-represented-as-an-array-of-digits) |
 | [Add two numbers represented as an array of digits](src/array/Add_Two_Arrays.java) |  |
 | [Print x items from index i](src/array/Circular_Array.java)| [1](http://www.geeksforgeeks.org/circular-array/) |
@@ -12,7 +13,6 @@
 | [Find the number of times a sorted array has been rotated](src/array/Find_Rotations.java)|[1](https://practice.geeksforgeeks.org/problems/rotation4723/1)|
 | [Find K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://practice.geeksforgeeks.org/problems/first-k-natural-numbers2135/1#)|
 | [Find Kth largest/smallest number](src/array/Kth_Largest.java)|[1](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)|
-| [All element pairs with the given absolute difference](src/array/Absolute_Difference.java)||
 
 # Backtracking
 
