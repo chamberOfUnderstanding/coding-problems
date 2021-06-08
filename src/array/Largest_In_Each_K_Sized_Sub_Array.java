@@ -18,21 +18,25 @@ import java.util.LinkedList;
  *            Scan the window and update max if any greater values are found
  *            Slide the window
  *
- * TIME     : O(n)  // 2n actually
+ * TIME     : O(nk)
  * SPACE    : O(1)
  * 
- * METHOD 2 : Use a Dequeue
+ * METHOD 2 : Use a Dequeue to store the array indices
  *            For first k items,             
- *             Dequeue all elements from the rear, that are < current element
+ *             Dequeue all elements from the rear (if any), that are < current element (the ones that cant be max)
  *             Enqueue current element at the rear
- *            Scan till the end of the array
+ *            Scan remaining elements
  *             Print the front of the queue (max of that window)
  *             Remove all items from front that do not belong to the new window
- *              For any index i, the first window in which it falls, will start at i - windowSize.
- *              So remove all the items that have a value less than this index from the front of the deque
+ *              If k is 3, first window is 0,1,2 whose max has been calculated in the previous steps. The next window STARTS at 1 (1,2,3).
+ *              So all elements in the deque that are at indices < 1 should be removed from the front. Hence for index i, the window starts at i - k (This is also the FIRST window that the index
+ *              will be a part of.
  *             Dequeue all elements from the rear, that are < current element
  *             Enqueue current element at the rear
- *            Print the front of the queue 
+ *            Print the front of the queue
+ *
+ * TIME     : O(n)
+ * SPACE    : O(n)
  */
 
 public class Largest_In_Each_K_Sized_Sub_Array {
@@ -68,15 +72,17 @@ public class Largest_In_Each_K_Sized_Sub_Array {
         Deque<Integer> dequeue = new LinkedList<>();
         int i = 0;
         for( ; i < windowSize; i++) {
-            while(!dequeue.isEmpty() && array[dequeue.peekLast()] <= array[i])
+            while(!dequeue.isEmpty() && array[i] >= array[dequeue.peekLast()])
                 dequeue.removeLast();
             dequeue.offerLast(i);
         }            
         for( ; i < size; i++) {
+          
             System.out.println(array[dequeue.peekFirst()]);
             while(!dequeue.isEmpty() && dequeue.peekFirst() <= i - windowSize)
                 dequeue.removeFirst();
-            while(!dequeue.isEmpty() && array[dequeue.peekLast()] <= array[i])
+          
+            while(!dequeue.isEmpty() && array[i] >= array[dequeue.peekLast()])
                 dequeue.removeLast();
             dequeue.offerLast(i);
         }
