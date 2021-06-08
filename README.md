@@ -14,6 +14,7 @@
 |8| [Find Kth largest/smallest number](src/array/Kth_Largest.java)|[1](http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/)|
 |9| [Find Kth largest in a stream of integers](src/array/Kth_Largest_In_An_Integer_Stream.java)|[1](http://www.geeksforgeeks.org/kth-largest-element-in-a-stream/)|
 |10| [Find K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://practice.geeksforgeeks.org/problems/first-k-natural-numbers2135/1#)|
+|11| [Find the maximum absolute difference between nearest left and right smallest elements](src/array/Nearest_Difference.java)|[1](http://www.geeksforgeeks.org/find-maximum-difference-between-nearest-left-and-right-smaller-elements/)|
 
 
 # Backtracking
