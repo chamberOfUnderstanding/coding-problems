@@ -6,19 +6,7 @@ package array;
  * Given an array arr[], find the maximum j - i such that arr[j] > arr[i].
  * 
  * http://www.geeksforgeeks.org/given-an-array-arr-find-the-maximum-j-i-such-that-arrj-arri/
- * 
- * =========
- * METHOD 1 
- * ========= 
- * Prepare two arrays, left and right as follows :
- *  For each index i of the array,
- *   left[i] holds the smallest value seen so far (0...i)
- *   right[i] holds the largest value seen so far (i...n)
- * Scan both arrays
- *  If left[i] is < right[j] then consider the difference j - i if it is the maximum difference
- *   Update j, as i is still the smallest element, we may see a larger to the right that can give a better max difference
- *  Else if left[i] > right[j], then look for a new smaller value by updating i
- *             
+ *            
  * TIME    : O(n)
  * SPACE   : O(n)
  * 
@@ -33,6 +21,10 @@ public class Largest_Index_Difference {
 
 	private static int findMaximumDifference(int[] array) {
 		int length = array.length;
+		
+		// Prepare two arrays, left and right as follows :
+                // left[i] holds the smallest value seen so far when going from 0 to i
+                // right[i] holds the largest value seen so far when going from n to i
 		int[] smallestValueToTheLeft = new int[length];
 		int[] largestValueToTheRight = new int[length];
 		smallestValueToTheLeft[0] = array[0];
@@ -41,18 +33,27 @@ public class Largest_Index_Difference {
 			smallestValueToTheLeft[i] = Math.min(array[i], smallestValueToTheLeft[i - 1]);
 		for(int i = length - 2; i >= 0; i--)
 			largestValueToTheRight[i] = Math.max(array[i], largestValueToTheRight[i + 1]);
+		
 		int maximumDifference = Integer.MIN_VALUE;
 		int smallest = 0;
 		int largest  = 0;
-		for(int i = 0, j = 0; i < length && j < length; ) {
+		
+		// Scan both arrays simulatenously
+		for(int i = 0, j = 0; i < length && j < length; ) {			
+			// if right[j] > left[i], it satisfies the max difference condition as j > i
 			if(largestValueToTheRight[j] > smallestValueToTheLeft[i]) {
+				// update maximumDifference with the largest value
 				maximumDifference = Math.max(maximumDifference, j - i);
 				smallest = array[i];
 				largest  = array[j]; 
+				// update j along
+				// i is NOT updated as there is a chance of encountering a larger j which would maximize the diff further
 				j++;
 			}
-			else
+			else {
+				// update i as we require a new smaller value
 				i++;
+			}
 		}
 		System.out.println(smallest + " " + largest);
 		return maximumDifference;
