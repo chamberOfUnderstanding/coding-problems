@@ -7,9 +7,10 @@ import java.util.Stack;
  *
  * Given array of integers, find the maximum absolute difference between NEAREST left and right smaller elements of every element in array.
  * If there is no smaller element on right side or left side of any element then we take zero as smaller element.
- * For example for leftmost element, nearest smaller element on left side is considered as 0.
+ *
+ * For leftmost element, nearest smaller element on left side is considered as 0.
  * Similarly for rightmost elements, smaller element on right side is considered as 0.
- * e.g.
+ *
  * Input  :    array[] = {2, 4, 8, 7, 7, 9, 3}
  * Output :     4
  * Left smaller   LS[] = {0, 2, 4, 4, 4, 7, 2}
@@ -38,7 +39,7 @@ import java.util.Stack;
  * 
  */
 
-public class Largest_Absolute_Difference {
+public class Nearest_Difference {
     
     public static void main(String[] args) {
         int[] array = {2, 4, 8, 7, 7, 9, 3};
