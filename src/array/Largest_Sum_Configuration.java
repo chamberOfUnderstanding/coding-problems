@@ -11,12 +11,8 @@ package array;
  * =========
  * METHOD 1
  * =========
- * Scan the array and find the sum of all elements, s,  and the initial configuration sum, cf
- * During each rotation, the following happens to the cf
- *  A[i] gets the last spot, so (n - 1) * A[i] gets added to the cf
- *  Everything else moves a spot backwards, so cf loses value = sum of all moved elements = array sum - A[i] = s - A[i]
- *  Hence cf = cf + (n - 1) * A[i] - (sum - A[i])
- *  Update maximum sum if this cf has a larger value
+ * Lets take example {1, 2, 3}. Current value is 1*0 + 2*1 + 3*2 = 8. Shifting it by one will make it {2, 3, 1} and next value
+ * will be 8 - (6 - 1) + 1*2 = 5 which is same as 2*0 + 3*1 + 1*2
  * 
  * TIME     : O(n)
  * SPACE    : O(1)
@@ -33,13 +29,21 @@ public class Largest_Sum_Configuration {
 
     private static int findMaximumSumConfiguration(int[] array) {
         int size = array.length;
+        
+        // find array sum and configuration sum
+        int maximumSum = configurationSum;
         int arraySum  = 0;
         int configurationSum = 0;
         for(int i = 0; i < size; i++) {
             arraySum += array[i];
             configurationSum += i * array[i];
         }
-        int maximumSum = configurationSum;
+       
+        // calculate the next configuration sum from the current one
+        // for index i,
+        //  the configuration sum increases by (n - 1) * a[i]  (as a[i] becomes the last item)
+        //  the configuration sum decreases in value by the sum of all moved elements, which is array sum - a[i]
+        // update maximum accordingly
         for(int i = 0; i < size - 1; i++) {
             configurationSum = configurationSum + (size - 1) * array[i] - (arraySum - array[i]);
             maximumSum = Math.max(maximumSum, configurationSum);
