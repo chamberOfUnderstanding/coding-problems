@@ -66,6 +66,7 @@ public class Matrix_Unique_Rows {
     }
 
 
+    // DECIMAL APPROACH
     private static void findUniqueRows(int[][] matrix, int rows, int columns) {
         Set<Integer> decimals   = new HashSet<>();
         int[] powersOfTwo       = new int[columns];
@@ -90,6 +91,7 @@ public class Matrix_Unique_Rows {
         return decimal;
     }
 
+    // TRIE APPROACH
     private static void findUniqueRowsUsingTrie(int[][] matrix, int rows, int columns) {
         Node root = new Node(-1);        
         for(int i = 0; i < rows; i++)

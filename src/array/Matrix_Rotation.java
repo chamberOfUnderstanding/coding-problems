@@ -39,6 +39,9 @@ public class Matrix_Rotation {
 		int lastRow     = startingIndex + rows;
 		int firstColumn = startingIndex;
 		int lastColumn  = startingIndex + columns;
+		
+		// prepare a list out of a layer
+		// similar to spiral matrix
 		LinkedList<Integer> layer = new LinkedList<Integer>();
 		
 		for(int columnIndex = firstColumn; columnIndex < lastColumn; columnIndex++)				

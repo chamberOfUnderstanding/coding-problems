@@ -48,15 +48,19 @@ public class Matrix_Search {
     }
 
 	private static boolean search(int[][] matrix, int rows, int columns, int target) {
+		// Start from element at TOP RIGHT
 	    int rowIndex       = 0;
 	    int columnIndex    = columns - 1;
-	    int currentElement = 0;
-		while(rowIndex < rows && columnIndex < columns){			
-			currentElement = matrix[rowIndex][columnIndex];
+	    
+		while(rowIndex < rows && columnIndex >= 0){			
+			int currentElement = matrix[rowIndex][columnIndex];
+			// if there's a match return true
 			if(currentElement == target)
 				return true;
+			// if target is greater, go down (larger elements are that way)
 			else if(target > currentElement)
 				rowIndex++;
+			// if target is smaller, go left (smaller elements are that way)
 			else if(target < currentElement)
 				columnIndex--;
 		}

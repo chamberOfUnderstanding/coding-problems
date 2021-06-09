@@ -28,6 +28,16 @@
 |22|[Matrix - Spiral form](src/array/Matrix_In_Spiral_Form.java)||
 |23|[Matrix - Kth smallest when rows and columns are sorted](src/array/Matrix_Kth_Smallest.java)|[1](http://www.geeksforgeeks.org/kth-smallest-element-in-a-row-wise-and-column-wise-sorted-2d-array-set-1/)|
 |24|[Matrix - Partition such that there are equal number of items on either side](src/array/Matrix_Partitioning.java)|[]()|
+|25|[Matrix - Rotation](src/array/Matrix_Rotation.java)|[]()|
+|26|[Matrix - Search for an item when rows and columns are sorted](src/array/Matrix_Search.java)|[]()|
+|27|[Matrix - Unique rows in a binary matrix](src/array/Matrix_Unique_Rows.java)|[1](http://www.geeksforgeeks.org/print-unique-rows/)|
+||[]()|[]()|
+||[]()|[]()|
+||[]()|[]()|
+||[]()|[]()|
+||[]()|[]()|
+||[]()|[]()|
+||[]()|[]()|
 ||[]()|[]()|
 
 
