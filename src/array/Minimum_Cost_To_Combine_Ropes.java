@@ -41,31 +41,44 @@ public class Minimum_Cost_To_Combine_Ropes {
         combineRopes(rope);
     }
 
-    private static void combineRopes(int[] rope) {
-        int ropes = rope.length - 1;
+    private static void combineRopes(int[] ropes) {
+        int ropesLeft = ropes.length - 1;
         int cost  = 0;
-        for(int i = ropes/2; i >= 0; i--)
-            sink(i, rope, ropes);
-        while(ropes >= 1) {
-            int firstMinimum = rope[0];
-            rope[0] = rope[ropes];
-            sink(0, rope, --ropes);
-            int secondMinimum = rope[0];
-            rope[0] = firstMinimum + secondMinimum;
-            cost += rope[0];
-            sink(0, rope, ropes);
+        
+        // sink/heapify half the ropes
+        for(int i = ropesLeft/2; i >= 0; i--)
+            sink(i, ropes, ropesLeft);
+        
+        // as long as there are ropes left
+        while(ropesLeft > 0) {
+        	
+        	// first minimum will be at the top of the minheap
+            int firstMinimum = ropes[0];
+            // replace top with the last item
+            ropes[0] = ropes[ropesLeft];
+            // reduce rope count and sink
+            ropesLeft--;
+            sink(0, ropes, ropesLeft);
+            // second minimum will have floated to the top by now
+            int secondMinimum = ropes[0];
+            // add combined rope value to the start of minheap
+            ropes[0] = firstMinimum + secondMinimum;
+            // calculate cost
+            cost += ropes[0];
+            // sink
+            sink(0, ropes, ropesLeft);
         }
         System.out.println(cost);
     }
 
-    private static void sink(int parent, int[] rope, int ropes) {
-        while(2 * parent <= ropes) {
+    private static void sink(int parent, int[] ropes, int ropesLeft) {
+        while(2 * parent <= ropesLeft) {
             int child = 2 * parent;
-            if(child < ropes && rope[child + 1] < rope[child])
+            if(child < ropesLeft && ropes[child + 1] < ropes[child])
                 child++;
-            if(rope[parent] <= rope[child])
+            if(ropes[parent] <= ropes[child])
                 return;
-            swap(rope, parent, child);
+            swap(ropes, parent, child);
             parent = child;
         }
     }

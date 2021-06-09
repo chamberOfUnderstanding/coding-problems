@@ -29,27 +29,46 @@ public class Missing_Natural_Numbers {
 		findMissingNaturalNumbers(input, input.length, k);
 	}
 
-
-	private static void findMissingNaturalNumbers(int[] input, int n, int k) {
-		Arrays.sort(input);
+	private static void findMissingNaturalNumbers(int[] numbers, int n, int k) {
+		// sort the data
+		Arrays.sort(numbers);
+		
 		ArrayList<Long> missingNumbers = new ArrayList<>();
 		int current = 0;
-		// Skip positive numbers
-		for(; current < n && input[current] < 0; current++);
-		long missingNumber = 1, previous = Integer.MIN_VALUE;
+		
+		// skip negative numbers as the question is to find missing natural numbers
+		while(current < n && numbers[current] < 0)
+			current++;
+		
+		// initialize missing as 1
+		long missingNumber = 1;
+		int previous = Integer.MIN_VALUE;
+		
+		// repeat until all k missing numbers are found
 		while(current < n && missingNumbers.size() < k) {
-			// Skip duplicate numbers
-			for (; input[current] == previous && current < n - 1; current++);
-			// Record any missing numbers else record the current index as previous
-			if (missingNumber != input[current]) {
+			
+			// skip duplicates by comparing it with previous
+			while(current < n - 1 && numbers[current] == previous)
+				current++;
+			
+			// record any missing numbers
+			if (missingNumber != numbers[current]) {
 				missingNumbers.add(missingNumber);
-			} else {
-				previous = input[current];
+			} 
+			
+            // else record the current value as previous
+			else {
+				previous = numbers[current];
 				current++;
 			}
+			
+			// advance to the next missing number
 			missingNumber++;
 		}
-		for (; missingNumbers.size() < k; missingNumbers.add(missingNumber++));
+		
+		// record any missing numbers beyond array's last item and within k
+		while(missingNumbers.size() < k)
+			missingNumbers.add(missingNumber++);
 
 		for(long x : missingNumbers) {
 			System.out.print(x + " ");
