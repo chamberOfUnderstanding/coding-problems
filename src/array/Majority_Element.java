@@ -48,29 +48,30 @@ public class Majority_Element {
         System.out.println(findMajorityElement(array));
     }
 
-    private static int findMajorityElement(int[] array) {
-        int candidate = findCandidate(array);
-        int count     = 1;
-        for(int i : array) {
-            if(candidate == i)
-                count++;
-            if(count > array.length / 2)
-                return candidate;
-        }
-        return -1;
-    }
-
     // Moore's Voting Algorithm
-    private static int findCandidate(int[] array) {
+    private static int findMajorityElement(int[] array) {
+        // count is 1 and candidateIndex is 0 (first possible candidate)
         int count = 1;
         int candidateIndex = 0;
         for(int i = 1; i < array.length; i++) {
+            // if the current element is the same as candidate, increment the count, else decrement
             count += (array[i] == array[candidateIndex])? 1 : -1;
+            // if the count is 0, then we need a new candidate
+            // reset the candidateIndex and the count
             if(count == 0) {
                 candidateIndex = i;
                 count = 1;
             }
         }
-        return array[candidateIndex];
+        // second pass is required to ensure that the element occurs more than n/2 times
+        // this second pass is required coz - For input {1,1,1,3,3,3} there is no majority element, but this logic would report 1.
+        count = 0;
+        for(int i : array.length) {
+            if (array[i] == array[candidateIndex])
+                count++;
+            if (count >= array.length / 2)
+                return array[candidateIndex];
+        }
+        return -1;
     }
 }
