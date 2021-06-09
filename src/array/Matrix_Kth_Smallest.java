@@ -50,15 +50,30 @@ public class Matrix_Kth_Smallest {
     }
 
     private static int findKthMax(int[][] matrix, int rows, int columns, int k) {
+        
+        // minHeap needs to store the data along with the row and column values
         Cell[] minHeap = new Cell[columns];
+        
+        // populate the min heap with values from the first row
+        // sinking is not necessary as values are already sorted
+       
+        // by doing this each element from a column will be available in the heap.
+        // no need to update the column values in further steps
         for(int i = 0; i < columns; i++)
             minHeap[i] = new Cell(matrix[0][i], 0 , i);
+        
+        // repeat k times
         while(k-- > 1) {
+            // grab the smallest value (what's on top of minHeap)
             int minRow    = minHeap[0].row;
             int minColumn = minHeap[0].column;
-            int value     = minRow + 1 < rows? matrix[minRow + 1][minColumn] : Integer.MAX_VALUE;            
+            // get the item on the next row if things are within bounds
+            // else set it as MAX_VALUE
+            // MAX_VALUE will always sink down
+            int value     = (minRow + 1 < rows) ? matrix[minRow + 1][minColumn] : Integer.MAX_VALUE;
+            // add the new value to heap and sink it
             minHeap[0]    = new Cell(value, minRow + 1, minColumn);
-            sink(minHeap, 0, rows - 1);            
+            sink(minHeap, 0, rows - 1);  
         }
         return minHeap[0].value;
     }
