@@ -57,31 +57,47 @@ public class Matrix_In_Spiral_Form {
     }
 
     private static void printMatrixInSpiralForm(int[][] matrix, int rows, int columns) {
+        // maintain variables to track where the row/column start and ends
         int startingRow    = 0;
-        int endingRow      = rows;
+        int endingRow      = rows - 1;
         int startingColumn = 0;
-        int endingColumn   = columns;		
-        while(startingRow < endingRow && startingColumn < endingColumn){
+        int endingColumn   = columns - 1;
+        
+        while(startingRow <= endingRow && startingColumn <= endingColumn) {
             
-            for(int i = startingColumn; i < endingColumn; i++)
+        	// print left to right
+            for(int i = startingColumn; i <= endingColumn; i++)
                 System.out.print(matrix[startingRow][i] + " ");		
             
+            // go down
             startingRow++;
             
-            for(int i = startingRow; i < endingRow; i++)
-                System.out.print(matrix[i][endingColumn - 1] + " ");
+            // print top to bottom
+            for(int i = startingRow; i <= endingRow; i++)
+                System.out.print(matrix[i][endingColumn] + " ");
             
+            // go left
             endingColumn--;
             
+            // if there are any rows left
             if(startingRow < endingRow){
-                for(int i = endingColumn - 1; i >= startingColumn; i--)
-                    System.out.print(matrix[endingRow - 1][i] + " ");
+            	
+            	// print in right to left
+                for(int i = endingColumn; i >= startingColumn; i--)
+                    System.out.print(matrix[endingRow][i] + " ");
+                
+                // go up
                 endingRow--;
             }
             
+            // if there are any columns left
             if(startingColumn < endingColumn){
-                for(int i = endingRow - 1; i >= startingRow; i--)
+            	
+            	// print bottom to top
+                for(int i = endingRow; i >= startingRow; i--)
                     System.out.print(matrix[i][startingColumn] + " ");
+                
+                // go right
                 startingColumn++;
             }
         }
