@@ -30,18 +30,24 @@ public class Longest_Sub_Array_With_Target_Sum {
     }
 
     private static int findLongestWindowWithTargetSum(int[] array, int targetSum) {
+        // sliding window
         int sum = 0;
         int windowStart   = 0;
         int windowEnd     = 0;
         int maxWindowSize = Integer.MIN_VALUE;
         while(windowEnd < array.length) {
-            if(sum + array[windowEnd] < targetSum)
-                sum += array[windowEnd++];
+            // if the target sum is not achieved, update the sum and grow the window
+            if(sum + array[windowEnd] < targetSum) {
+                sum += array[windowEnd];
+                windowEnd++
+            }
+            // if the target sum is achieved, update the sum, calculate window size and grow the window
             else if(sum + array[windowEnd] == targetSum) {
                 sum += array[windowEnd];
                 maxWindowSize = Math.max(maxWindowSize, windowEnd - windowStart + 1);
                 windowEnd++;
             }
+            // if it goes beyond the target, reset sum to 0, shrink the window
             else {
                 sum = 0;
                 windowStart++;
