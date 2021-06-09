@@ -39,7 +39,7 @@ public class Longest_Sub_Array_With_Target_Sum {
             // if the target sum is not achieved, update the sum and grow the window
             if(sum + array[windowEnd] < targetSum) {
                 sum += array[windowEnd];
-                windowEnd++
+                windowEnd++;
             }
             // if the target sum is achieved, update the sum, calculate window size and grow the window
             else if(sum + array[windowEnd] == targetSum) {
