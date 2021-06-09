@@ -66,7 +66,7 @@ public class Majority_Element {
         // second pass is required to ensure that the element occurs more than n/2 times
         // this second pass is required coz - For input {1,1,1,3,3,3} there is no majority element, but this logic would report 1.
         count = 0;
-        for(int i : array.length) {
+        for(int i : array) {
             if (array[i] == array[candidateIndex])
                 count++;
             if (count >= array.length / 2)

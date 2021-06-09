@@ -31,8 +31,8 @@
 |25|[Matrix - Rotation](src/array/Matrix_Rotation.java)|[]()|
 |26|[Matrix - Search for an item when rows and columns are sorted](src/array/Matrix_Search.java)|[]()|
 |27|[Matrix - Unique rows in a binary matrix](src/array/Matrix_Unique_Rows.java)|[1](http://www.geeksforgeeks.org/print-unique-rows/)|
-||[]()|[]()|
-||[]()|[]()|
+|28|[Merge overlapping intervals](src/array/Merge_Overlapping_Intervals.java)|[1](http://www.geeksforgeeks.org/merging-intervals/)|
+|29|[Minimum cost to combine ropes](src/array/Minimum_Cost_To_Combine_Ropes.java)|[1](http://www.geeksforgeeks.org/connect-n-ropes-minimum-cost/)|
 ||[]()|[]()|
 ||[]()|[]()|
 ||[]()|[]()|

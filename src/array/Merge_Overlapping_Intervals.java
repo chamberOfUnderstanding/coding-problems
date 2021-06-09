@@ -58,7 +58,9 @@ public class Merge_Overlapping_Intervals {
             if(x.start == y.start)	
                 intervals.remove(i);
             else if(x.end > y.start){
+            	// remove both
                 intervals.remove(i);
+                // now i + 1 is at i
                 intervals.remove(i);
                 intervals.add(i, new Interval(x.start, Math.max(x.end, y.end)));
             }
@@ -68,11 +70,14 @@ public class Merge_Overlapping_Intervals {
     }
 
     private static class IntervalComparator implements Comparator<Interval>{		
-        public int compare(Interval x,Interval y){
-            return y.start == x.start && y.end == x.end ? 0
-                    : y.start > x.start || y.start == x.start && y.end > x.end ? -1 
-                            : 1;
-        }
+    	public int compare(Interval x, Interval y){
+    		return y.start == x.start && 
+    				y.end == x.end ? 
+    						0
+    						: y.start > x.start || y.start == x.start && y.end > x.end ? 
+    									-1 
+    									: 1;
+    	}
     }
 
     static class Interval{
