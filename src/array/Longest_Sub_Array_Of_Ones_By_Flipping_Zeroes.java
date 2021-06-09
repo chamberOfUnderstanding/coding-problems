@@ -32,29 +32,44 @@ public class Longest_Sub_Array_Of_Ones_By_Flipping_Zeroes {
     }
 
     private static void getStreak(int[] stream, int size, int k) {
-        int windowStart     = 0;
+        
+    	// track current window and best window
+    	int windowStart     = 0;
         int windowEnd       = 0;
         int bestWindowStart = 0;
         int bestWindow      = Integer.MIN_VALUE;
         int zeroesInWindow  = 0;
+        
         while(windowEnd != size){
+        	
+        	// if the zeroes are <= k, we can stretch the window and look for more 0s
             if(zeroesInWindow <= k){
-                if(stream[windowEnd] == 0)
-                    zeroesInWindow++;
+            	// check the last item in window
+            	// if it's a 0, include it in the zero count
+                if(stream[windowEnd] == 0) {
+                	zeroesInWindow++;
+                }
+                // stretch the window
                 windowEnd++;
+                // if the current window is better, then record it as the best so far
+                int currentWindow = windowEnd - windowStart; 
+                if(currentWindow > bestWindow){
+                    bestWindowStart = windowStart;
+                    bestWindow      = currentWindow;
+                }
             }
+
+            // if there are > k zeroes, we need to shrink the window to avoid 0s in the beginning 
             else if(zeroesInWindow > k){
-                if(stream[windowStart] == 0)
-                    zeroesInWindow--;
-                windowStart++;
-            }
-            
-            if(zeroesInWindow <= k && windowEnd - windowStart > bestWindow){
-                bestWindowStart = windowStart;
-                bestWindow      = windowEnd - windowStart;
+            	// if the first item is a 0, reduce it from the zero count
+            	if(stream[windowStart] == 0) {
+            		zeroesInWindow--;
+            	}
+            	// slide the window past the first item
+            	windowStart++;
             }
         }
-        System.out.print("\nFlip the zeroes at indices :");
+        System.out.print("Flip the zeroes at indices :");
         for(int i = bestWindowStart; i < windowEnd; i++)
             if(stream[i] == 0)
                 System.out.print(i + " ");
