@@ -20,6 +20,7 @@
 |14|[Maximum( i * A[i] ) where i is obtained by rotating the array by one](src/array/Largest_Sum_Configuration.java)|[1](http://www.geeksforgeeks.org/maximum-sum-iarri-among-rotations-given-array/)|
 |15|[Largest contiguous sub array sum](src/array/Largest_Sum_Sub_Array.java)|[1](https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/)|
 |16|[Maximum( (A[i] - i) - (A[j] - j) ) where i != j](src/array/Largest_Value.java)|[1](https://www.geeksforgeeks.org/maximize-value-of-arri-i-arrj-j-in-an-array/)|
+|17|[Longest streak of ones obtainable by flipping k zeroes](src/array/Longest_Sub_Array_Of_Ones_By_Flipping_Zeroes.java)||
 
 # Backtracking
 

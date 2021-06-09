@@ -33,7 +33,8 @@ import java.util.Map;
 public class Longest_Sub_Array_With_Zero_Sum {
 
     public static void main(String arg[]) {
-        int[] array = {15, -2, 2, -8, 1, 7, 10, 23};
+//        int[] array = {15, -2, 2, -8, 1, 7, 10, 23};
+        int[] array = {5, -5, 2, -1, -1};
         System.out.println(findLongestSubArrayWithZeroSum(array));
     }
 
