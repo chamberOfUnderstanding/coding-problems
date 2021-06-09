@@ -31,7 +31,7 @@ public class Largest_Sum_Configuration {
         int size = array.length;
         
         // find array sum and configuration sum
-        int maximumSum = configurationSum;
+        int maximumSum = 0;
         int arraySum  = 0;
         int configurationSum = 0;
         for(int i = 0; i < size; i++) {
