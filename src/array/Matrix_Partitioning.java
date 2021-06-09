@@ -7,35 +7,18 @@ package array;
  *  Divide the array into 2 halves with equal cherries.
  *  You can only make a single cut either horizontally or vertically.
  *  
- *  e.g    # . . #   => NO
+ *  e.g    # . . #         => NO
  *         # # # .
  *         
- *         # # # # # => YES  //This is the input in to the code
+ *         # # # # #       => YES
  *         . . . . .
  *         # . . # .
  *         . . # # #
  *         . . . . .
  *         
- *         # . . #  => NO
+ *         # . . #         => NO
  *         # # # .
  *         # # . .
- * 
- * 
- * 
- * =========
- * METHOD 1
- * ===========
- * METHOD 1 : Maintain two arrays that store the # cherries in a given row (cherriesInRow) & the # cherries in a column (cherriesInColumn)
- *            Scan the cherry matrix and update these arrays. Also calculate the # cherries
- *            If the # cherries is odd, then there is no way to evenly distribute it, so quit
- *            Else see if a horizontal or vertical cut can do the job
- *              For this, scan the cherriesInRow array and add each cherry to the distributedCherries
- *              An even distribution occurs if distributedCherries = half # cherries. Return true if this happens
- *            If the cuts don't do it, return false
- *            
- * TIME     : O(m*n) + O(m) + O(n) => O(m*n)
- * SPACE    : O(m + n)
- *
  * 
  */
 
@@ -51,9 +34,15 @@ public class Matrix_Partitioning {
 			System.out.print("Can they be divided? " + (isPartitionable(matrix, 5, 5)? "Yes" : "No"));
 		}
 
+    // TIME   : O(m*n) + O(m) + O(n) => O(m*n)
+    // SPACE  : O(m + n)
 	private static boolean isPartitionable(char[][] matrix, int rows, int columns) {
+		
+		// tracks cherries in row and cherries in column
 		int[] cherriesInRow    = new int[rows];
 		int[] cherriesInColumn = new int[columns];
+		
+		// calculate cherries in row and column along with total cherries		
 		int totalCherries = 0;
 		for(int i = 0; i < rows; i++)
 			for(int j = 0; j < columns; j++){
@@ -63,14 +52,23 @@ public class Matrix_Partitioning {
 					totalCherries++;
 				} 
 			}
-		return totalCherries % 2 != 0? false : cut(cherriesInRow, totalCherries) || cut(cherriesInColumn, totalCherries);
+
+		// partitioning is not possible if total cherries is odd
+		// else attempt the cut both horizontally and vertically
+		return 	totalCherries % 2 == 0 && 
+				cut(cherriesInRow, totalCherries) || 
+				cut(cherriesInColumn, totalCherries);
 	}
 
-	private static boolean cut(int[] cherriesInRow, int totalCherries) {
-	    int cherries = 0;
-		for(int i = 0; i < cherriesInRow.length; i++){
-			cherries += cherriesInRow[i];
-			if(cherries == totalCherries/2)
+	private static boolean cut(int[] cherries, int totalCherries) {
+	    int distributed = 0;
+		for(int i = 0; i < cherries.length; i++) {
+			
+			// mark the cherries as distributed
+			distributed += cherries[i];
+			
+			// if distributed reaches half of the total cherries, then a cut is POSSIBLE
+			if(distributed == totalCherries/2)
 				return true;					
 		}
 		return false;

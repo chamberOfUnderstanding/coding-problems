@@ -27,7 +27,7 @@
 |21|[Element that occurs more than n/2 times](src/array/Majority_Element.java)|[1](http://www.geeksforgeeks.org/majority-element/)|
 |22|[Matrix - Spiral form](src/array/Matrix_In_Spiral_Form.java)||
 |23|[Matrix - Kth smallest when rows and columns are sorted](src/array/Matrix_Kth_Smallest.java)|[1](http://www.geeksforgeeks.org/kth-smallest-element-in-a-row-wise-and-column-wise-sorted-2d-array-set-1/)|
-||[]()|[]()|
+|24|[Matrix - Partition such that there are equal number of items on either side](src/array/Matrix_Partitioning.java)|[]()|
 ||[]()|[]()|
 
 
