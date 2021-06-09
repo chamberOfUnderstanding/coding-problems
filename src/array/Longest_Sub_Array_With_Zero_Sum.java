@@ -9,7 +9,6 @@ import java.util.Map;
  * Given an array of integers, find length of the largest sub array with sum = 0.
  * 
  * http://www.geeksforgeeks.org/find-the-largest-subarray-with-0-sum/
- * https://discuss.leetcode.com/topic/25465/longest-continous-zero-sum-subarray/5
  * 
  * ===================
  * METHOD 1 : HashMap
@@ -33,20 +32,27 @@ import java.util.Map;
 public class Longest_Sub_Array_With_Zero_Sum {
 
     public static void main(String arg[]) {
-//        int[] array = {15, -2, 2, -8, 1, 7, 10, 23};
+//      int[] array = {15, -2, 2, -8, 1, 7, 10, 23};
         int[] array = {5, -5, 2, -1, -1};
+//		int[] array = {2, 8, -3, -5, 2, -4, 6, 1, 2, 1, -3, 4};        
         System.out.println(findLongestSubArrayWithZeroSum(array));
     }
 
     private static int findLongestSubArrayWithZeroSum(int array[]){
         int sum = 0;
         int longestSubArray = -1;
+        // map stores the sums encountered along with the indices
         Map<Integer, Integer> map = new HashMap<>();
+        // initialize it with 0 sum at index -1
+        // if another 0 is encountered, this -1 will help in getting the full length of all items to that index
+        // e.g. 0 is encountered at index 10, therefore all items till index 10 add up to 0
+        // mapping for 0 is -1, so length is 10 - -1 => 11
+        map.put(0, -1);
         for(int i = 0; i < array.length; i++) {
             sum += array[i];
-            if(sum == 0)
-                longestSubArray = Math.max(longestSubArray, i + 1);
-            else if(map.containsKey(sum))
+            // If a sum repeats, that means elements between the first encounter and the current encounter have a sum of 0
+            // update longest sub array
+            if(map.containsKey(sum))
                 longestSubArray = Math.max(longestSubArray, i - map.get(sum));
             else
                 map.put(sum, i);
