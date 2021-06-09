@@ -3,7 +3,7 @@ package array;
 /**
  * @author 47un
  *
- *  Given a 2d array with only two elements �#� & �.� . �#� represents cherry and �.� represents nothing. 
+ *  Given a 2d array with only two elements # and . where # represents cherry and . represents nothing. 
  *  Divide the array into 2 halves with equal cherries.
  *  You can only make a single cut either horizontally or vertically.
  *  
