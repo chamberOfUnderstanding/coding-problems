@@ -33,22 +33,40 @@ public class Smallest_Sub_Array_With_Target_Sum {
 	}
 	
 	private static int getSmallestSubArray(int[] array, int targetSum) {
+		// assume the biggest window possible
 		int smallestWindow = array.length;
 		int startIndex = 0;
 		int endIndex = 0;
 		int sum = array[startIndex];
 		while(true){
+			// if the target sum is not reached
 			if(sum < targetSum){
+				
+				// end of the line, break
 				if(endIndex == array.length-1)
 					break;
-				sum += array[++endIndex];
+				
+				// advance the window
+				endIndex++;
+				
+				// add the current item to sum
+				sum += array[endIndex];
 			}
+			// if target sum has reached
 			else{
+				// update smallest window
 				smallestWindow = Math.min(smallestWindow, endIndex - startIndex);
 				printWindow(array, startIndex, endIndex);
+				
+				// an element that's same as the target sum is present in the array, best case!
 				if(smallestWindow == 0)
 				    break;
-				sum -= array[startIndex++];	
+				
+				// avoid the first item from the sum
+				sum -= array[startIndex];
+				
+				// shrink
+				startIndex++;	
 			}
 		}
 		return smallestWindow + 1; 
