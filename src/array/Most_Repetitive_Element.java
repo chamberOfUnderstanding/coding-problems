@@ -51,18 +51,42 @@ public class Most_Repetitive_Element {
         findTheElementThatOccursTheMost(array, range);
     }
 
-    private static void findTheElementThatOccursTheMost(int[] array, int range) {
+    private static void findTheElementThatOccursTheMost(int[] array, int k) {
+        
+        // the array elements will always be contained within the range of 0 to k - 1
+        // since k < n, each index of the array can be used to calculate the repetition of the element at that index
+        // array[i] % k will range from 0 to k - 1, same as the array indices
+        // array = {1, 1, 1, 2}
+        // k = 2
+        // i = 0, array[0] % k => 1 % 2 => 1
+        // i = 1, array[1] % k => 1 % 2 => 1
+        // i = 2, array[2] % k => 1 % 2 => 1
+        // i = 3, array[3] % k => 2 % 2 => 0
+        // k will be added to index 1 3 times (giving 7)
+        // k will be added to index 0 1 time (giving 2)
+        // largest of the above gives the most repetitive element
         for(int i = 0; i < array.length; i++)
-            array[array[i] % range] += range;
+            array[array[i] % k] += k;
+               
+        // after the above operation, elements from index 0 to k - 1 will have been altered to contain the "frequencies" of those numbers
+        // dividing the numbers by k gives the frequency
+        // if it's greater than the most repetitive one, mark it as the most repetitive one
         int mostRepetitive = 0;
-        for(int i = 1; i < range; i++)
-            if(array[i] / range > array[mostRepetitive] / range)
+        for(int i = 1; i < k; i++)
+            if(array[i] / k > array[mostRepetitive] / k)
                 mostRepetitive = i;
-        for(int i = 0; i < range; i++)
-            if(i != mostRepetitive && array[i] / range == array[mostRepetitive] / range)
+        
+        // second scan to check if there are any other elements with the same frequency as we require the least of the elements in this case
+        for(int i = 0; i < k; i++)
+            if(i != mostRepetitive && array[i] / k == array[mostRepetitive] / k)
                 mostRepetitive = Math.min(mostRepetitive, i);
+        
+        // revert the changes made to the array by % with k
+        // 7 % 2 => 1
+        // 2 % 2 => 0
         for(int i = 0; i < array.length; i++)
-            array[i] %= range;
+            array[i] %= k;
+        
         System.out.println(mostRepetitive);
     }
 }
