@@ -44,14 +44,14 @@ public class Rearrange_Positive_And_Negative_Numbers {
     private static void rearrangeI(int[] numbers){
         int low  = 0;
         int high = numbers.length - 1;
-        while(low < high)
-            if(numbers[low] >= 0){
+        while(low < high) {
+            if(numbers[low] >= 0) {
                 if(numbers[high] < 0)
                     swap(numbers, low, high);
                 high--;
             }
-            else
-                low++;
+           low++;
+        }
     }
 
     private static void rearrangeII(int[] numbers){
