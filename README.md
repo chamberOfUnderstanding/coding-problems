@@ -35,7 +35,7 @@
 |29|[Minimum cost to combine ropes](src/array/Minimum_Cost_To_Combine_Ropes.java)|[1](http://www.geeksforgeeks.org/connect-n-ropes-minimum-cost/)|
 |30|[Minimum difference between element pairs](src/array/Minimum_Difference_Pair.java)|[1](http://www.geeksforgeeks.org/find-minimum-difference-pair/)|
 |31|[K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://www.geeksforgeeks.org/find-first-k-natural-numbers-missing-given-array/)|
-||[]()|[]()|
+|32|[Most repetitive element](src/array/Most_Repetitive.java)|[1]( http://www.geeksforgeeks.org/find-the-maximum-repeating-number-in-ok-time/)|
 ||[]()|[]()|
 ||[]()|[]()|
 ||[]()|[]()|
