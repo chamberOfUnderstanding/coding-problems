@@ -14,8 +14,6 @@ package array;
  * Scan both arrays, maintain low, middle and high indices
  * Calculate median (middle element between low and high) of both arrays
  * If the medians are equal, this is the median of the merged array as well, so return it
- * If median1 < median2, find median of array1[middle..high] and median of array2[0...middle]
- * If median1 > median2, find median of array1[0...middle] and median of array2[middle..high]
  * Repeat till low = high for both arrays
  * Return (max of low elements + max of high elements)/2
  *             
@@ -59,10 +57,12 @@ public class Sorted_Arrays_Median {
             int median2 = median(middle2, array2);
             if(median1 == median2)
                 return median1;
+            // If median1 < median2, find median of array1[middle..high] and median of array2[0...middle]
             else if(median1 < median2) {
                 low1  = middle1;
                 high2 = middle2; 
             }
+            // If median1 > median2, find median of array1[0...middle] and median of array2[middle..high]
             else{
                 high1 = middle1; 
                 low2  = middle2;
@@ -71,6 +71,7 @@ public class Sorted_Arrays_Median {
         return (Math.max(array1[low1], array2[low2]) + Math.max(array1[high1], array2[high2])) >> 1;
     }
     
+    // if middle is odd, return a[middle] else average of a[middle - 1] and a[middle]
     private static int median(int middle, int[] array) {
         return (middle % 2 != 0)? (array[middle - 1] + array[middle]) >> 1 : array[middle];
     }
