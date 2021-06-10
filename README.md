@@ -43,6 +43,15 @@
 |37|[Frequency of each element](src/array/Repetitions_Of_Each_Element.java)|[1](http://www.geeksforgeeks.org/count-frequencies-elements-array-o1-extra-space-time/)|
 |38|[Rotate an array](src/array/Rotate_Array.java)|[1](http://www.practice.geeksforgeeks.org/problem-page.php?pid=360)|
 |39|[Matrix - Rotation 90](src/array/Rotate_Square_Matrix_90.java)|[1](http://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/)|
+|40|[Second smallest and largest elements](src/array/Second_Largest_And_Smallest.java)|[1](http://www.geeksforgeeks.org/to-find-smallest-and-second-smallest-element-in-an-array/)[1](http://www.geeksforgeeks.org/second-minimum-element-using-minimum-comparisons/)|
+|41|[Smallest sub array with target sum](src/array/Smallest_Sub_Array_With_Target_Sum.java)|[]()|
+|42|[Sort an array with 0 1 2 in one pass](src/array/Sort_Three_Itemed_Array.java)|[1](http://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/)|
+|43|[Sorted Array - Element with equal number of smaller items to the left and larger items to the right](src/array/Sorted_Array_Equal_Point.java)|[1](http://www.geeksforgeeks.org/find-equal-or-middle-point-in-a-sorted-array-with-duplicates/)|
+|44|[Sorted Array - Largest element that is smaller than or equal to x](src/array/Sorted_Array_Floor_Search.java)|[1](http://www.geeksforgeeks.org/floor-in-a-sorted-array/)|
+||[]()|[]()|
+||[]()|[]()|
+||[]()|[]()|
+||[]()|[]()|
 ||[]()|[]()|
 ||[]()|[]()|
 ||[]()|[]()|
