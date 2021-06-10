@@ -58,8 +58,7 @@
 |52|[Buildings with a sunset view](src/array/Sunset_View.java)|[1](http://www.geeksforgeeks.org/amazon-interview-experience-set-189-for-sde1/)|
 |53|[Triplet with the largest product](src/array/Three_Great_Candidates.java)|[1](http://www.practice.geeksforgeeks.org/editorial.php?pid=765)|
 |54|[Triplet with the given sum](src/array/Triplet_Sum.java)|[1](http://www.geeksforgeeks.org/find-a-triplet-that-sum-to-a-given-value/)|
-|55|[Triplet with the given sum from three different arrays](src/array/Triplet_Sum_From_Three_Arrays.java)|[1](http://www.geeksforgeeks.org/find-three-element-from-different-three-arrays-such-that-that-a-b-c-k/
-)|
+|55|[Triplet with the given sum from three different arrays](src/array/Triplet_Sum_From_Three_Arrays.java)|[1](http://www.geeksforgeeks.org/find-three-element-from-different-three-arrays-such-that-that-a-b-c-k/)|
 |56|[Validate a Tic Tac Toe board and determine the winner](src/array/Validate_Tic_Tac_Toe.java)|[1](http://www.geeksforgeeks.org/validity-of-a-given-tic-tac-toe-board-configuration/)|
 |57|[Sort an array in a wave like pattern](src/array/Wave_Array.java)|[1](http://www.geeksforgeeks.org/sort-array-wave-form-2/)|
 
