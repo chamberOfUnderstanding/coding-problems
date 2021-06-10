@@ -43,6 +43,7 @@ public class Pairs_In_An_Array {
             for(int j = i + 1; j < array.length; j++) {
                 if(array[i] == array[j])
                     continue;
+                // use a custom Pair object with a comparator to avoid all these strings
                 String possiblePair1 = new String(array[i] + ":" + array[j]);
                 String possiblePair2 = new String(array[j] + ":" + array[i]);
                 if(!uniquePairs.contains(possiblePair1) && !uniquePairs.contains(possiblePair2))
