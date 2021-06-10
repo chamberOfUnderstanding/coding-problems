@@ -36,6 +36,15 @@
 |30|[Minimum difference between element pairs](src/array/Minimum_Difference_Pair.java)|[1](http://www.geeksforgeeks.org/find-minimum-difference-pair/)|
 |31|[K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://www.geeksforgeeks.org/find-first-k-natural-numbers-missing-given-array/)|
 |32|[Most repetitive element](src/array/Most_Repetitive.java)|[1]( http://www.geeksforgeeks.org/find-the-maximum-repeating-number-in-ok-time/)|
+|33|[Generate all pairs](src/array/Pairs_In_An_Array.java)|[1](http://stackoverflow.com/questions/2392652/java-find-all-possible-pairs-in-an-array)|
+|34|[Peak element - one that is larger than its neighbors](src/array/Peak_Element_1D.java)|[1](https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/)|
+|35|[Pair of elements with the given product](src/array/Product_Pair_In_An_Array.java)|[1](http://www.geeksforgeeks.org/pair-with-given-product-set-1-find-if-any-pair-exists/)|
+|36|[Rearrange an array with positive and negative numbers](src/array/Rearrange_Positive_And_Negative_Numbers.java)|[]()|
+|37|[Frequency of each element](src/array/Repetitions_Of_Each_Element.java)|[1](http://www.geeksforgeeks.org/count-frequencies-elements-array-o1-extra-space-time/)|
+|38|[Rotate an array](src/array/Rotate_Array.java)|[1](http://www.practice.geeksforgeeks.org/problem-page.php?pid=360)|
+|39|[Matrix - Rotation 90](src/array/Rotate_Square_Matrix_90.java)|[1](http://www.geeksforgeeks.org/inplace-rotate-square-matrix-by-90-degrees/)|
+||[]()|[]()|
+||[]()|[]()|
 ||[]()|[]()|
 ||[]()|[]()|
 ||[]()|[]()|
