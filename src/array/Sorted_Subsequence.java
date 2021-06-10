@@ -39,20 +39,34 @@ public class Sorted_Subsequence {
     }
 
     private static int[] findSortedSubsequence(int[] array) {
+        // applies to arrays of length >= 3
         if(array.length >= 3) {
+            
+            // initialize the first three elements
             int low     = array[0];
             int medium  = array[1];
             int high    = array[2];
+            
+            // check if they satisfy the condition
             if(low < medium && medium < high)
                 return new int[]{low, medium, high};
+            
+            // scan the rest if not
             for(int i = 3; i < array.length; i++) {
+                
+                // get the current element
                 int current = array[i];
+                
+                // if it's less than low, it's the new low
                 if(current <= low)
                     low = current;
+                // if it's less than medium, then it's > low (As it fails the first condition) 
+                // then low and current form a sorted sequence
                 else if(current <= medium) {
                     medium = low;
                     high   = current;
                 }
+                // current > medium
                 else
                     return new int[] {medium, high, current};
             }
