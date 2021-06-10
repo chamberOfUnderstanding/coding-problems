@@ -64,8 +64,12 @@ public class Sorted_Array_Number_Of_Occurences {
         while(low <= high) {
             int mid = (low + high) >> 1;
             if(array[mid] == item){
+                // if it's the first item
+                // or the previous item is < current
                 if(mid == 0 || array[mid - 1] < item)
                     return mid;
+                // then the previous item is = current, first occurence is to the left
+                // update high to mid - 1
                 else
                     high = mid - 1;
             }
