@@ -14,7 +14,7 @@ import java.util.Set;
  * METHOD 1
  * =========
  * Scan the array
- *  If the target is 0 and the item is 0, return true (Since the target is a 0 and one item is a 0, no need to find the other half)
+ *  
  *  If the item is not 0 (0 items are useless otherwise)
  *   Check if the hashSet contains this item (Someone else is looking for it)
  *    If yes, return true
@@ -38,11 +38,14 @@ public class Product_Pair_In_An_Array {
     private static boolean isProductPresent(int target, int[] array){
         Set<Integer> hashSet = new HashSet<>();
         for(int element : array)
+            // if the target is 0 and the item is 0, no need to find the other half, so return 0
             if(element == 0 && target == 0)
                 return true;
             else if(element != 0)
+                // if it's in the set, then some other element is looking for this to form the target
                 if(hashSet.contains(element))
                     return true;
+                // add the element and the quotient if it fully divides the target
                 else if(target / element > 0 && target % element == 0){
                     hashSet.add(element);
                     hashSet.add(target / element);
