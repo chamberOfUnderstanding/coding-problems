@@ -48,15 +48,20 @@
 |42|[Sort an array with 0 1 2 in one pass](src/array/Sort_Three_Itemed_Array.java)|[1](http://www.geeksforgeeks.org/sort-an-array-of-0s-1s-and-2s/)|
 |43|[Sorted Array - Element with equal number of smaller items to the left and larger items to the right](src/array/Sorted_Array_Equal_Point.java)|[1](http://www.geeksforgeeks.org/find-equal-or-middle-point-in-a-sorted-array-with-duplicates/)|
 |44|[Sorted Array - Largest element that is smaller than or equal to x](src/array/Sorted_Array_Floor_Search.java)|[1](http://www.geeksforgeeks.org/floor-in-a-sorted-array/)|
-||[]()|[]()|
-||[]()|[]()|
-||[]()|[]()|
-||[]()|[]()|
-||[]()|[]()|
-||[]()|[]()|
-||[]()|[]()|
-||[]()|[]()|
-||[]()|[]()|
+|45|[Sorted Array - Number of occurances](src/array/Sorted_Array_Number_Of_Occurences.java)|[1](http://www.geeksforgeeks.org/count-number-of-occurrences-in-a-sorted-array/)|
+|46|[Sorted Array - Median](src/array/Sorted_Arrays_Median.java)|[1](http://www.geeksforgeeks.org/median-of-two-sorted-arrays/)|
+|47|[Minimum element in a sorted and rotated array](src/array/Sorted_Rotated_Array_Minimum_Element.java)|[1](http://www.practice.geeksforgeeks.org/problem-page.php?pid=819)|
+|48|[Search a sorted and rotated array](src/array/Sorted_Rotated_Array_Search.java)|[1](http://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/)|
+|49|[Sorted sub sequence](src/array/Sorted_Subsequence.java)|[1](http://www.geeksforgeeks.org/find-a-sorted-subsequence-of-size-3-in-linear-time/)|
+|50|[Strictly increasing sequence](src/array/Strictly_Increasing_Sequence.java)|[1](http://www.geeksforgeeks.org/find-maximum-sum-strictly-increasing-subarray/)|
+|51|[Pair of elements with the given sum](src/array/Sum_Pair_In_An_Array.java)|[]()|
+|52|[Buildings with a sunset view](src/array/Sunset_View.java)|[1](http://www.geeksforgeeks.org/amazon-interview-experience-set-189-for-sde1/)|
+|53|[Triplet with the largest product](src/array/Three_Great_Candidates.java)|[1](http://www.practice.geeksforgeeks.org/editorial.php?pid=765)|
+|54|[Triplet with the given sum](src/array/Triplet_Sum.java)|[1](http://www.geeksforgeeks.org/find-a-triplet-that-sum-to-a-given-value/)|
+|55|[Triplet with the given sum from three different arrays](src/array/Triplet_Sum_From_Three_Arrays.java)|[1](http://www.geeksforgeeks.org/find-three-element-from-different-three-arrays-such-that-that-a-b-c-k/
+)|
+|56|[Validate a Tic Tac Toe board and determine the winner](src/array/Validate_Tic_Tac_Toe.java)|[1](http://www.geeksforgeeks.org/validity-of-a-given-tic-tac-toe-board-configuration/)|
+|57|[Sort an array in a wave like pattern](src/array/Wave_Array.java)|[1](http://www.geeksforgeeks.org/sort-array-wave-form-2/)|
 
 
 # Backtracking
