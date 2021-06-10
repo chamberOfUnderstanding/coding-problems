@@ -60,7 +60,7 @@ public class Next_Greatest_Element {
     public static void findNextGreatestElementI(int[] array) {
         Stack<Integer> stack = new Stack<Integer>();
         stack.push(array[0]);
-        for (int i = array.length - 1; i >= 0; i--){
+        for (int i = 1; i < array.length; i++){
             while(!stack.isEmpty() && array[i] >= stack.peek())
                 System.out.println(stack.pop() + " : " + array[i]);
             stack.push(array[i]); 
