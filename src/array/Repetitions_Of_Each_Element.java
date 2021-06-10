@@ -36,8 +36,13 @@ public class Repetitions_Of_Each_Element {
 
 	private static void findFrequency(int[] array) {
 		int size = array.length;
+		
+		// Decrement each element by 1
+                // This is to avoid going out of bounds if the number 'n' is present (The array can hold only up to n-1)
 		for(int i = 0; i < size; i++)
 			array[i]--;
+		
+		// Size (n) gets added to each element and it gets stored at index = element
 		for(int i = 0; i < size; i++)
 			array[array[i] % size] += size;
 		for(int i = 0; i < size; i++)
