@@ -73,6 +73,7 @@ public class Stack_Sort {
     	Stack<Integer> tempStack = new Stack<>();
 		while (!stack.isEmpty()) {
 			int poppedItem = stack.pop();
+			// all items on tempStack that are larger than the poppedItem must be brought back to make space for poppedItem
 			while (!tempStack.isEmpty() && poppedItem < tempStack.peek())
 				stack.push(tempStack.pop());
 			tempStack.push(poppedItem);
