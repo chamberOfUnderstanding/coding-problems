@@ -44,9 +44,13 @@ public class Stock_Span_Problem {
         span[0] = 1;
         stack.push(0);
         for(int i = 1; i < stock.length; i++) {
+            // pop till a larger stock value is seen, meaning everything from today to that day had a smaller stock
             while(!stack.isEmpty() && stock[i] >= stock[stack.peek()])
                 stack.pop();			
+            // if nothing is left in stack, then the span is index + 1 (highest possible value for this index)
+            // else it's the difference between current index and the one on stack top
             span[i] = stack.isEmpty()? i + 1 : i - stack.peek();
+            // everything must be pushed
             stack.push(i);
         }
         System.out.println("Stock    Span");
