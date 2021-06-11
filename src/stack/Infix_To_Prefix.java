@@ -42,8 +42,14 @@ public class Infix_To_Prefix {
         for(int low = 0, high = infix.length() - 1; low <= high; low++, high--) {
             char charAtLow  = infixStringBuilder.charAt(low);
             char charAtHigh = infixStringBuilder.charAt(high);
-            charAtLow  += charAtLow  == '('? 1 : charAtLow  == ')'? -1 : 0;
-            charAtHigh += charAtHigh == '('? 1 : charAtHigh == ')'? -1 : 0;
+            if (charAtLow == '(')
+                charAtLow++;
+            else if (charAtLow == ')')
+                charAtLow--;
+            if (charAtHigh == '(')
+                charAtHigh++;
+            else if (charAtHigh == ')')
+                charAtHigh--;
             infixStringBuilder.setCharAt(low, charAtHigh);            
             infixStringBuilder.setCharAt(high, charAtLow);            
         }
