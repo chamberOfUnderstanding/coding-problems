@@ -48,15 +48,25 @@ public class K_Stacks {
 
     private void operate(Scanner scanner) {
         System.out.print("\nEnter number of stacks ");
+        
+        // k sized array maintains stack tops
+        // initially all stacks have -1 as top (empty stack)
         int k = Integer.parseInt(scanner.nextLine());
         int[] top = new int[k];
         Arrays.fill(top, -1);
+         
+        // SIZE sized array stores the neighbor information (next item in array)
+        // initially every element (i) is pointing to the next element (i+1)
+        // last element has -1
         int[] next = new int[SIZE];
         for(int i = 0; i < SIZE; i++)
             next[i] = i + 1;
         next[SIZE - 1] = -1;
+        
+        // tracks the next free spot
         int free = 0;
         int stackNumber = 0;
+        
         System.out.print("\n"
                 + "Enter operation\n"
                 + "1. push Y x : Pushes x onto stack Y\n"
@@ -68,14 +78,24 @@ public class K_Stacks {
             String[] operation = scanner.nextLine().split(" ");
             if(operation[0] == "quit")
                 quit();
+            
+            // get which stack to work with
             stackNumber = Integer.parseInt(operation[1]) - 1;
+            
             switch(operation[0]){
             case "push" :
                 int data = Integer.parseInt(operation[2]);
+                    
+                // free is -1 when there's no space left
                 if(free == -1){
                     System.out.println("Overflow!");
                     continue;
                 }
+                // current slot to be filled is "free"
+                // update free to the next free slot
+                // move whatever is on stack top to the next free slot
+                // now stack top gets current free slot
+                // place item in a[current free slot]    
                 int currentFreeSlot = free;
                 free = next[currentFreeSlot];
                 next[currentFreeSlot] = top[stackNumber];
