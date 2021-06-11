@@ -56,12 +56,17 @@ public class Longest_Valid_Substring {
     private static int longestValidSubstringI(String string) {
         int result = 0;
         Stack<Integer> stack = new Stack<>();
+        
+        // ensures stack is never empty
         stack.push(-1);
         for(int i = 0; i < string.length(); i++)
+            // push opening bracket indices right away
             if(string.charAt(i) == '(')
                 stack.push(i);
             else {
+                // pop it, mostly it's an opening bracket
                 stack.pop();
+                // if the stack aint empty, then some match has occured, calculate the length using i - top most index on stack
                 if(!stack.isEmpty())
                     result = Math.max(result, i - stack.peek());
                 else
@@ -78,15 +83,18 @@ public class Longest_Valid_Substring {
             if(string.charAt(i) == '(')
                 openingBrackets++;
             else
+                // if there are any ( to match with, we have a streak
                 if(openingBrackets > 0) {
                     openingBrackets--;
                     streak += 2;
                 }
+                // if there is none, record the streak and reset it to 0
                 else {
                     longest = Math.max(longest, streak);
                     openingBrackets = 0;
                     streak = 0;
                 }
+        // if there're any ( left out, then calculate streak again
         if(openingBrackets >= 0)
             longest =  Math.max(longest, streak);
         return longest;
