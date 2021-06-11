@@ -15,7 +15,7 @@ import java.util.Stack;
  *  The compiler first scans the expression to evaluate b * c, then again scans the expression to add a to it.
  *  The result is then added to d after another scan.
  * The repeated scanning makes it very in-efficient. It is better to convert the expression to postfix (or prefix) form before evaluation.
- * The corresponding expression in postfix form is: abc*d++.
+ * The corresponding expression in postfix form is: a b c * + d +.
  * The postfix expressions can be evaluated easily using a stack
  *
  * http://quiz.geeksforgeeks.org/stack-set-2-infix-to-postfix/
@@ -78,6 +78,7 @@ public class Infix_To_Postfix {
                     postfix.append(stack.pop());
                 stack.push(infixCharacter);
                 break;
+             // operand gets added to output
             default :
                 postfix.append(infixCharacter);
                 break;
