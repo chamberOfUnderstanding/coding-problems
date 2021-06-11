@@ -34,9 +34,11 @@ public class Special_Stack {
 
     public static void main(String...strings){
         try(Scanner scanner = new Scanner(System.in)){
+            
             int[] stack   = new int[100];
             Stack<Integer> minStack = new Stack<>();
             int top = -1;
+            
             System.out.print("\n"
                     + "Enter operation\n"
                     + "1. push x : Pushes x\n"
