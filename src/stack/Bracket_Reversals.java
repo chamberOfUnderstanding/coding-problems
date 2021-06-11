@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * @author 47un
  *
- * Given an expression with only ‘}’ and ‘{‘.
+ * Given an expression with only â€˜}â€™ and â€˜{â€˜.
  * The expression may not be balanced.
  * Find minimum number of bracket reversals to make the expression balanced.
  * 
@@ -109,17 +109,22 @@ public class Bracket_Reversals {
         int reversals = 0;
         for(int i = 0; i < expression.length(); i++)
             switch(expression.charAt(i)){
-            case '{' :
-                openingBrackets++;
-                break;
-            case '}' :
-                if(openingBrackets > 0)
-                    openingBrackets--;
-                else{
-                    reversals++;
+                case '{' :
+                    // increase the openingBrackets
                     openingBrackets++;
-                }					
+                    break;
+                case '}' :
+                    // if there are any openingBrackets to match this with, 
+                    if(openingBrackets > 0)
+                        openingBrackets--;
+                    else{
+                        reversals++;
+                        // this reversed } becomes a { and adds to the count
+                        openingBrackets++;
+                    }					
             }
+        // for this input {{{{ the logic leads to reversals = 0 and openingBrackets = 4
+        // with 4 opening brackets, two reversals are need to balance things, which is what the below equation does
         return reversals + openingBrackets/2;
     }
 
