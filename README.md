@@ -62,6 +62,50 @@
 |56|[Validate a Tic Tac Toe board and determine the winner](src/array/Validate_Tic_Tac_Toe.java)|[1](http://www.geeksforgeeks.org/validity-of-a-given-tic-tac-toe-board-configuration/)|
 |57|[Sort an array in a wave like pattern](src/array/Wave_Array.java)|[1](http://www.geeksforgeeks.org/sort-array-wave-form-2/)|
 
+# Stack
+|No| Problem | Reference |
+|-|---------|-----------|
+|1|[Paranthesis balance check](src/stack/Balanced_Paranthesis.java)|[1](http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)|
+|2|[Celebrity problem](src/stack/Celebrity_Problem.java)|[1](http://www.geeksforgeeks.org/the-celebrity-problem/)|
+|3|[Equalize height of three stacks](src/stack/Equal_Stacks.java)|[]()|
+|4|[Minimal paranthesis reversals](src/stack/Bracket_Reversals.java)|[1](http://www.geeksforgeeks.org/minimum-number-of-bracket-reversals-needed-to-make-an-expression-balanced/)|
+|5|[Largest rectangular area in a histogram](src/stack/Histogram.java)|[1](http://www.geeksforgeeks.org/largest-rectangle-under-histogram/)|
+|6|[Infix to postfix](src/stack/Infix_To_Postfix.java)|[1](http://quiz.geeksforgeeks.org/stack-set-2-infix-to-postfix/)|
+|7|[Infix to prefix](src/stack/Infix_To_Prefix.java)|[1](http://scanftree.com/Data_Structure/infix-to-prefix)|
+|8|[K stacks using a single array](src/stack/K_Stacks.java)|[1](http://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/)|
+|9|[Longest balanced paranthesis sequence](src/stack/Longest_Valid_Substring.java)|[1](http://www.geeksforgeeks.org/length-of-the-longest-valid-substring/)|
+|10|[Next Greatest Element for each element of an array](src/stack/Next_Greatest_Element.java)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
+|11|[Next Smallest Element for each element of an array](src/stack/Next_Smallest_Element.java)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
+|12|[Postfix evaluation](src/stack/Postfix_Evaluation.java)|[1](http://quiz.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/)|
+|13|[Postfix to Infix](src/stack/Postfix_To_Infix.java)|[1](http://scanftree.com/Data_Structure/postfix-to-infix)|
+|14|[Prefix to Infix](src/stack/Prefix_To_Infix.java)|[1](http://scanftree.com/Data_Structure/prefix-to-infix)|
+|15|[Queue using two stacks](src/stack/Queue_Using_Stacks.java)|[1](http://www.geeksforgeeks.org/queue-using-stacks/)|
+|16|[getMin() using additional space](src/stack/Special_Stack.java)|[1](http://www.geeksforgeeks.org/design-and-implement-special-stack-data-structure/)|
+|17|[getMin() without using additional space](src/stack/Special_Stackv2.java)|[1](http://www.geeksforgeeks.org/design-a-stack-that-supports-getmin-in-o1-time-and-o1-extra-space/)|
+|18|[Implementation using array and linked list](src/stack/Stack_Implementation.java)|[1](http://quiz.geeksforgeeks.org/stack-set-1/)|
+|19|[Reversal](src/stack/Stack_Reverse.java)|[1](http://www.geeksforgeeks.org/reverse-a-stack-using-recursion/)|
+|20|[Sorting](src/stack/Stack_Sort.java)|[1](http://www.geeksforgeeks.org/sort-a-stack-using-recursion/)|
+|21|[Stack using a queue](src/stack/Stack_Using_Queue.java)|[1](http://www.geeksforgeeks.org/implement-a-stack-using-single-queue/)|
+|22|[Stack using two queues](src/stack/Stack_Using_Queues.java)|[1](http://www.geeksforgeeks.org/implement-stack-using-queue/)|
+|23|[Stock span problem](src/stack/Stock_Span_Problem.java)|[1](http://www.geeksforgeeks.org/the-stock-span-problem/)|
+|24|[String reversal](src/stack/String_Reverse.java)|[1](http://quiz.geeksforgeeks.org/stack-set-3-reverse-string-using-stack/)|
+|25|[Towers of Hanoi](src/stack/Towers_Of_Hanoi.java)|[1](http://www.geeksforgeeks.org/iterative-tower-of-hanoi/)|
+|26|[Two stacks using one array](src/stack/Two_Stacks.java)|[1](http://www.geeksforgeeks.org/implement-two-stacks-in-an-array/)|
+||[]()|[]()|
+
+# Queue
+|No| Problem | Reference |
+|-|---------|-----------|
+|1|[Generate binary numbers till n](src/queue/Binary_Number_Generator.java)|[1](http://www.geeksforgeeks.org/interesting-method-generate-binary-numbers-1-n/)|
+|2|[Circular Queue](src/queue/Circular_Queue.java)|[]()|
+|3|[Complete binary tree from array](src/queue/Complete_Binary_Tree_From_List.java)|[1](http://www.geeksforgeeks.org/given-linked-list-representation-of-complete-tree-convert-it-to-linked-representation/)|
+|4|[K queues using a single array](src/queue/K_Queues.java)|[1](http://www.geeksforgeeks.org/efficiently-implement-k-queues-single-array/)|
+|5|[Largest multiple of three](src/queue/Largest_Multiple_Of_Three).java)|[1](http://www.geeksforgeeks.org/find-the-largest-number-multiple-of-3/)|
+|6|[LRU Cache](src/queue/LRU_Cache.java)|[1](http://www.geeksforgeeks.org/implement-lru-cache/)|
+|7|[Maximum of K sized sub array](src/queue/Maximum_Of_All_Subarrays_Of_Size_K.java)|[1](http://www.geeksforgeeks.org/maximum-of-all-subarrays-of-size-k/)|
+|8|[Implementation using array and list](src/queue/Queue_Implementation)|[]()|
+|9|[Rotting oranges](src/queue/Rotting_Oranges.java)|[1](http://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/)|
+||[]()|[]()|
 
 # Backtracking
 
@@ -113,36 +157,6 @@
 |[Check if the array is a BST preorder traversal](src/tree/bst/Is_BST_Preorder_Traversal.java)|[1](http://www.geeksforgeeks.org/check-if-a-given-array-can-represent-preorder-traversal-of-binary-search-tree/)|
 |[Construct a BST from its preorder traversal](src/tree/bst/BST_From_Preorder_Traversal.java)|[1](http://www.geeksforgeeks.org/construct-bst-from-given-preorder-traversa/)|
 
-# Stack
-|No| Problem | Reference |
-|-|---------|-----------|
-|1|[Paranthesis balance check](src/stack/Balanced_Paranthesis.java)|[1](http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)|
-|2|[Celebrity problem](src/stack/Celebrity_Problem.java)|[1](http://www.geeksforgeeks.org/the-celebrity-problem/)|
-|3|[Equalize height of three stacks](src/stack/Equal_Stacks.java)|[]()|
-|4|[Minimal paranthesis reversals](src/stack/Bracket_Reversals.java)|[1](http://www.geeksforgeeks.org/minimum-number-of-bracket-reversals-needed-to-make-an-expression-balanced/)|
-|5|[Largest rectangular area in a histogram](src/stack/Histogram.java)|[1](http://www.geeksforgeeks.org/largest-rectangle-under-histogram/)|
-|6|[Infix to postfix](src/stack/Infix_To_Postfix.java)|[1](http://quiz.geeksforgeeks.org/stack-set-2-infix-to-postfix/)|
-|7|[Infix to prefix](src/stack/Infix_To_Prefix.java)|[1](http://scanftree.com/Data_Structure/infix-to-prefix)|
-|8|[K stacks using a single array](src/stack/K_Stacks.java)|[1](http://www.geeksforgeeks.org/efficiently-implement-k-stacks-single-array/)|
-|9|[Longest balanced paranthesis sequence](src/stack/Longest_Valid_Substring.java)|[1](http://www.geeksforgeeks.org/length-of-the-longest-valid-substring/)|
-|10|[Next Greatest Element for each element of an array](src/stack/Next_Greatest_Element.java)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
-|11|[Next Smallest Element for each element of an array](src/stack/Next_Smallest_Element.java)|[1](http://www.geeksforgeeks.org/next-greater-element/)|
-|12|[Postfix evaluation](src/stack/Postfix_Evaluation.java)|[1](http://quiz.geeksforgeeks.org/stack-set-4-evaluation-postfix-expression/)|
-|13|[Postfix to Infix](src/stack/Postfix_To_Infix.java)|[1](http://scanftree.com/Data_Structure/postfix-to-infix)|
-|14|[Prefix to Infix](src/stack/Prefix_To_Infix.java)|[1](http://scanftree.com/Data_Structure/prefix-to-infix)|
-|15|[Queue using two stacks](src/stack/Queue_Using_Stacks.java)|[1](http://www.geeksforgeeks.org/queue-using-stacks/)|
-|16|[getMin() using additional space](src/stack/Special_Stack.java)|[1](http://www.geeksforgeeks.org/design-and-implement-special-stack-data-structure/)|
-|17|[getMin() without using additional space](src/stack/Special_Stackv2.java)|[1](http://www.geeksforgeeks.org/design-a-stack-that-supports-getmin-in-o1-time-and-o1-extra-space/)|
-|18|[Implementation using array and linked list](src/stack/Stack_Implementation.java)|[1](http://quiz.geeksforgeeks.org/stack-set-1/)|
-|19|[Reversal](src/stack/Stack_Reverse.java)|[1](http://www.geeksforgeeks.org/reverse-a-stack-using-recursion/)|
-|20|[Sorting](src/stack/Stack_Sort.java)|[1](http://www.geeksforgeeks.org/sort-a-stack-using-recursion/)|
-|21|[Stack using a queue](src/stack/Stack_Using_Queue.java)|[1](http://www.geeksforgeeks.org/implement-a-stack-using-single-queue/)|
-|22|[Stack using two queues](src/stack/Stack_Using_Queues.java)|[1](http://www.geeksforgeeks.org/implement-stack-using-queue/)|
-|23|[Stock span problem](src/stack/Stock_Span_Problem.java)|[1](http://www.geeksforgeeks.org/the-stock-span-problem/)|
-|24|[String reversal](src/stack/String_Reverse.java)|[1](http://quiz.geeksforgeeks.org/stack-set-3-reverse-string-using-stack/)|
-|25|[Towers of Hanoi](src/stack/Towers_Of_Hanoi.java)|[1](http://www.geeksforgeeks.org/iterative-tower-of-hanoi/)|
-|26|[Two stacks using one array](src/stack/Two_Stacks.java)|[1](http://www.geeksforgeeks.org/implement-two-stacks-in-an-array/)|
-||[]()|[]()|
 
 # String
 | Problem | Reference |

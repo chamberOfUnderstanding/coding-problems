@@ -37,8 +37,10 @@ public class Histogram {
 
 	public static void main(String[] args) {
 		int bars = 7;
-		int[] histogram = {6, 2, 5, 4, 5, 1, 6};
-		System.out.println(findMaxArea(bars, histogram));
+		int[] histogram1 = {6, 2, 5, 4, 5, 1, 6};
+		int[] histogram2 = {6, 2, 5, 4, 5, 2, 6};
+		System.out.println(findMaxArea(bars, histogram1));
+		System.out.println(findMaxArea(bars, histogram2));
 	}
 
 	public static int findMaxArea(int bars, int[] histogram){		
@@ -53,9 +55,12 @@ public class Histogram {
 				i++;
 			}
 		        // If the current bar is shorter, then we need to find the region with max area covered by all the histograms in stack till now.
-			else
+			else {
+				while(!stack.isEmpty() && histogram[i] < histogram[stack.peek()] ) {
+					maxArea = Math.max(maxArea, calculateArea(i, histogram, stack));	
+				}
 				// Since a shorter bar has been seen, a new area calculation session has to begin within the stack, that starts with this bar.
-				maxArea = Math.max(maxArea, calculateArea(i, histogram, stack));            
+			}
 		while(!stack.isEmpty())
 			maxArea = Math.max(maxArea, calculateArea(i, histogram, stack));
 		return maxArea;
@@ -68,6 +73,7 @@ public class Histogram {
 	// if stack is empty, then top value * where it was encountered (since the width is 1 for all)
 	// else top value * number of items between the current item and the next one on top of the stack
 	public static int calculateArea(int i, int[] histogram, Stack<Integer> stack){
-		return histogram[stack.pop()] * (stack.isEmpty()? i : i - stack.peek() - 1);
+		int lastItem = histogram[stack.pop()];
+		return lastItem * (stack.isEmpty()? i : i - stack.peek() - 1);
 	}
 }

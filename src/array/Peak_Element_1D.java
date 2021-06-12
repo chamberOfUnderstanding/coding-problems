@@ -29,7 +29,7 @@ import java.util.List;
  * 
  */
 
-public class Peak_Finding_1D {
+public class Peak_Element_1D {
 
 	public static void main(String[] args) {
 		test(new int[]{5, 10, 20, 15});
