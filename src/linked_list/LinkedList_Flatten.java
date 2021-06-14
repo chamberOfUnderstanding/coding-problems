@@ -6,8 +6,8 @@ import java.util.Scanner;
  * @author 47un
  *
  * Given a linked list where every node represents a linked list and contains two pointers of its type:
- * (i) Pointer to next node in the main list (we call it ‘right’ pointer in below code)
- * (ii) Pointer to a linked list where this node is head (we call it ‘down’ pointer in below code).
+ * (i) Pointer to next node in the main list (we call it â€˜rightâ€™ pointer in below code)
+ * (ii) Pointer to a linked list where this node is head (we call it â€˜downâ€™ pointer in below code).
  * 
  * Flatten it and sort it!
  * 
@@ -15,13 +15,10 @@ import java.util.Scanner;
  * 
  *        5 -> 10 -> 19 -> 28
  *        |    |     |     |
- *        V    V     V     V
  *        7    20    22    35
  *        |          |     |
- *        V          V     V
  *        8          50    40
  *        |                |
- *        V                V
  *        30               45
  *
  * Output : 5->7->8->10->19->20->22->28->30->30->40->45->50

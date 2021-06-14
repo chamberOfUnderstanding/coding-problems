@@ -100,7 +100,7 @@
 |2|[Circular Queue](src/queue/Circular_Queue.java)|[]()|
 |3|[Complete binary tree from array](src/queue/Complete_Binary_Tree_From_List.java)|[1](http://www.geeksforgeeks.org/given-linked-list-representation-of-complete-tree-convert-it-to-linked-representation/)|
 |4|[K queues using a single array](src/queue/K_Queues.java)|[1](http://www.geeksforgeeks.org/efficiently-implement-k-queues-single-array/)|
-|5|[Largest multiple of three](src/queue/Largest_Multiple_Of_Three).java)|[1](http://www.geeksforgeeks.org/find-the-largest-number-multiple-of-3/)|
+|5|[Largest multiple of three](src/queue/Largest_Multiple_Of_Three.java)|[1](http://www.geeksforgeeks.org/find-the-largest-number-multiple-of-3/)|
 |6|[LRU Cache](src/queue/LRU_Cache.java)|[1](http://www.geeksforgeeks.org/implement-lru-cache/)|
 |7|[Maximum of K sized sub array](src/queue/Maximum_Of_All_Subarrays_Of_Size_K.java)|[1](http://www.geeksforgeeks.org/maximum-of-all-subarrays-of-size-k/)|
 |8|[Implementation using array and list](src/queue/Queue_Implementation)|[]()|
