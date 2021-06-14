@@ -42,16 +42,19 @@ public class Tree_From_Preorder_And_Inorder {
         traverse(root);
     }	
 
-    public static Node constructBinaryTree(int inorderStartIndex, int inorderEndIndex, int[] inorder, PreorderIndex preorderIndex, int[] preorder){
-        if(inorderStartIndex > inorderEndIndex)
+    public static Node constructBinaryTree(int i_start, int i_end, int[] i, PreorderIndex p_i, int[] p){
+        if(i_start > i_end)
             return null;
-        Node node = new Node(preorder[preorderIndex.value]);
-        preorderIndex.value++;
-        if(inorderStartIndex == inorderEndIndex)
+        
+        Node node = new Node(p[p_i.value]);
+        
+        p_i.value++;
+        
+        if(i_start == i_end)
             return node;
-        int inorderIndex = search(node.data, inorder);
-        node.left = constructBinaryTree(inorderStartIndex, inorderIndex - 1, inorder, preorderIndex, preorder);
-        node.right = constructBinaryTree(inorderIndex + 1, inorderEndIndex,  inorder, preorderIndex, preorder);
+        int i_i = search(node.data, i);
+        node.left = constructBinaryTree(i_start, i_i - 1, i, p_i, p);
+        node.right = constructBinaryTree(i_i + 1, i_end,  i, p_i, p);
         return node;
     }
 

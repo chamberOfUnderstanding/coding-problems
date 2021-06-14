@@ -56,6 +56,8 @@ public class Identical_Trees {
 	}
 
 	private static boolean areTheyIdenticalRecursive(Node node1, Node node2) {
+		// xor for null check
+		// xor gives true if they are different
 		if(node1 == null ^ node2 == null)
 			return false;
 		if(node1 != null && node2 != null)

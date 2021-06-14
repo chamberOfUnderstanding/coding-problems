@@ -16,6 +16,7 @@ import java.util.List;
  * If this node has the data, return true
  * Scan the LST and RST for the node, if found, add this node to the path and return true
  * If none of the above happened, return false
+ * Reverse the path list	
  * 
  * TIME     : O(n)
  * SPACE    : O(n)
@@ -55,7 +56,8 @@ public class Root_To_Key_Path {
             return false;
         if(node.data == key)
             return true;
-        if(findPath(node.left, key, path) || findPath(node.right, key, path)) {
+        if(findPath(node.left, key, path) 
+        		|| findPath(node.right, key, path)) {
             path.add(node.data);
             return true;
         }

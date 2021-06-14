@@ -43,11 +43,19 @@ public class Convert_To_Mirror_Image {
         Node node3 = new Node(node6, 3, node7);
         Node node2 = new Node(node4, 2, node5);
         Node node1 = new Node(node2, 1, node3);
+//        System.out.print("\nInorder traversal of original tree : ");
+//        inorderTraversal(node1);
+//        node1 = convertToMirrorImage(node1);
+//        System.out.print("\nInorder traversal of mirrored tree : ");
+//        inorderTraversal(node1);
+        
         System.out.print("\nInorder traversal of original tree : ");
         inorderTraversal(node1);
-        node1 = convertToMirrorImage(node1);
+        mirror_Image_by_swapping_children(node1);
         System.out.print("\nInorder traversal of mirrored tree : ");
         inorderTraversal(node1);
+        System.out.println();
+        System.out.println("Expected " + "8 9 7 3 6 1 5 2 4");
     }
 
     private static Node convertToMirrorImage(Node node) {
@@ -58,6 +66,16 @@ public class Convert_To_Mirror_Image {
         node.left  = mirroredRST;
         node.right = mirroredLST;
         return node;
+    }
+    
+    private static void mirror_Image_by_swapping_children(Node node) {
+    	if(node == null)
+    		return;
+    	Node temp = node.left;
+    	node.left = node.right;
+    	node.right = temp;
+    	mirror_Image_by_swapping_children(node.left);
+    	mirror_Image_by_swapping_children(node.right);
     }
 
     private static void inorderTraversal(Node node) {

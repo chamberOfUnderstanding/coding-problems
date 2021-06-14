@@ -37,13 +37,17 @@ public class Root_To_Leaf_Path_Target_Sum {
                 + " is present? "
                 + (isPathSumPresent(node1, 0, pathSum)? "Yes" : "No"));
     }
-    private static boolean isPathSumPresent(Node node, int sumSoFar, int targetSum) {
+    private static boolean isPathSumPresent(Node node, int sum, int targetSum) {
         if(node == null)
             return false;
-        if(isLeaf(node) && (sumSoFar + node.data) == targetSum)
+        // include this node's data in the sum
+        int updatedSum = sum + node.data;
+        // if it's a leaf and it matches the target, bingo
+        if(isLeaf(node) && updatedSum == targetSum)
             return true;
-        return isPathSumPresent(node.left, sumSoFar + node.data, targetSum) || 
-                isPathSumPresent(node.right, sumSoFar + node.data, targetSum);
+        // else look for it in the LST and RST WITH the updated Sum
+        return isPathSumPresent(node.left, updatedSum, targetSum) || 
+                isPathSumPresent(node.right, updatedSum, targetSum);
     }
     private static boolean isLeaf(Node node) {
         return node.left == null && node.right == null;

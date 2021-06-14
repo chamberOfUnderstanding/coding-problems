@@ -10,6 +10,20 @@ package tree;
  * 
  * Hmmmmmmm...
  * 
+ *     2
+ *    / \
+ *   1   3
+ *   
+ *  becomes 
+ *  
+ *        2
+ *       / \
+ *      2   3
+ *     /   /
+ *    1   3
+ *   /
+ *  1
+ * 
  * =====================
  * METHOD 1 : No Backups
  * =====================
@@ -61,7 +75,10 @@ public class Double_Tree {
     private static void doubleTreev1(Node node) {
         if(node == null)
             return;
+        // prepare a node with this node's data 
+        // the new node has this node's left as it's left
         node.left = new Node(node.left, node.data, null);
+        // doubtTree-ify the old left child
         doubleTreev2(node.left.left);
         doubleTreev2(node.right);
     }

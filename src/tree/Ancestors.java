@@ -63,11 +63,16 @@ public class Ancestors {
 	}
 
 	private static boolean findAncestorsRecursive(Node node, int data) {
+		// null means leaf node, this cant be an ancestor
 		if(node == null)
 			return false;
+		// data matches, so all nodes above this are the ancestors
 		if(node.data == data)
 			return true;
-		if(findAncestorsRecursive(node.left, data) || findAncestorsRecursive(node.right, data)){
+		// check if the node is present in the lst or the rst
+		// if yes then this node is an ancestor
+		if(findAncestorsRecursive(node.left, data) || 
+				findAncestorsRecursive(node.right, data)){
 			System.out.print(node.data + " ");
 			return true;
 		}

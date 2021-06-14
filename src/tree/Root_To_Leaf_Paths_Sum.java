@@ -41,10 +41,14 @@ public class Root_To_Leaf_Paths_Sum {
 	private static int findSum(Node node, int number) {
 		if(node == null)
 			return 0;
+		// update the number
 		number = number * 10 + node.data;
+		// if it's a leaf, return it
 		if(isLeaf(node))
 			return number;
-		return findSum(node.left, number) + findSum(node.right, number);
+		// else add the sums of the LST and RST
+		return findSum(node.left, number) 
+				+ findSum(node.right, number);
 	}
 
 	private static boolean isLeaf(Node node) {

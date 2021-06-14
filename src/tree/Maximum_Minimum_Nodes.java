@@ -43,7 +43,7 @@ public class Maximum_Minimum_Nodes {
     }
 
     private static int findMaximumNode(Node node) {
-        return node == null? 
+        return node == null ? 
                 Integer.MIN_VALUE : 
                     maximum(node.data, findMaximumNode(node.left), findMaximumNode(node.right));
     }

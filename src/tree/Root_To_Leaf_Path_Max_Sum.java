@@ -38,14 +38,20 @@ public class Root_To_Leaf_Path_Max_Sum {
 		System.out.println("Maximum root to leaf path sum is : " + findMaximumRootToLeafPathSum(node1, 0));
 	}
 
-	private static int findMaximumRootToLeafPathSum(Node node, int sumSoFar) {
+	private static int findMaximumRootToLeafPathSum(Node node, int sum) {
 		if(node == null)
 			return 0;		
+		// update the sum with current node's value
+		int updatedSum = sum + node.data;
+		// if node is a leaf, then cant process any further, return the updatedSum
 		if(isLeaf(node))
-			return sumSoFar + node.data;
+			return updatedSum;
+		// else visit the kids and let them add to the updatedSum
+		// this node returns the largest among those
 		return Math.max(
-				findMaximumRootToLeafPathSum(node.left, sumSoFar + node.data),
-				findMaximumRootToLeafPathSum(node.right, sumSoFar + node.data));
+				findMaximumRootToLeafPathSum(node.left, updatedSum),
+				findMaximumRootToLeafPathSum(node.right, updatedSum)
+				);
 	}
 
 	private static boolean isLeaf(Node node) {

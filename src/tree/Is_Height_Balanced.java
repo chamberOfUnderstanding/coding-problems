@@ -71,6 +71,7 @@ public class Is_Height_Balanced {
 	}
 	
 	private static int isBalanced(Node node) {
+		// null node is balanced
 		if(node == null)
 			return 0;
 		int lst = isBalanced(node.left);
@@ -79,7 +80,10 @@ public class Is_Height_Balanced {
 		int rst = isBalanced(node.right);
 		if(rst == -1)
 			return -1;
-		return Math.abs(lst - rst) > 1? -1 : 1 + Math.max(lst, rst);
+		return Math.abs(lst - rst) > 1 ?
+				-1 
+				: 
+				1 + Math.max(lst, rst);
 	}
 
 	@SuppressWarnings("unused")

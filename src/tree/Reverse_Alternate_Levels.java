@@ -71,7 +71,7 @@ public class Reverse_Alternate_Levels {
 		Node node1 = new Node(node2, 1, node3);
 
 		System.out.print("Reversing alternate levels recursively : ");
-		reverseAlternateLevelsPreorder(node1.left, node1.right, 0);
+		reverse_Alternate_Levels_Preorder(node1.left, node1.right, 0);
 		levelOrder(node1);
 
 		System.out.print("\nReversing alternate levels again, using stack : ");
@@ -79,13 +79,13 @@ public class Reverse_Alternate_Levels {
 		levelOrder(node1);
 	}
 
-	private static void reverseAlternateLevelsPreorder(Node node1, Node node2, int level){
+	private static void reverse_Alternate_Levels_Preorder(Node node1, Node node2, int level){
 		if(node1 == null || node2 == null)
 			return;
 		if(level % 2 == 0)
 			swapData(node1, node2);
-		reverseAlternateLevelsPreorder(node1.left, node2.right, level + 1);
-		reverseAlternateLevelsPreorder(node1.right, node2.left, level + 1);
+		reverse_Alternate_Levels_Preorder(node1.left, node2.right, level + 1);
+		reverse_Alternate_Levels_Preorder(node1.right, node2.left, level + 1);
 	}
 
 	private static void swapData(Node node1, Node node2) {

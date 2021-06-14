@@ -62,10 +62,14 @@ public class Inorder_Traversal {
 		Node current = root;
 		boolean nodesLeftForProcessing = true;
 		while(nodesLeftForProcessing){
+			// push the node into stack
+			// move left
 			while(current != null){
 				stack.push(current);
 				current = current.left;
 			}
+			// once the left most is reached pop and print it
+			// then move right of popped
 			if(!stack.isEmpty()){
 				current = stack.pop();
 				System.out.print(current.data + " ");

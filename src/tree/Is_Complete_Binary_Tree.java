@@ -39,7 +39,7 @@ import java.util.Queue;
  * None of the above conditions hold? Proceed normally
  *
  * TIME    : O(n)
- * SPACE   : O(n
+ * SPACE   : O(n)
  * 
  */
 
@@ -83,15 +83,15 @@ public class Is_Complete_Binary_Tree {
 		return true;
 	}
 
-	private static boolean isCompleteRecursive(Node node, boolean onlyLeavesCanBeSeen){
+	private static boolean isCompleteRecursive(Node node, boolean leavesOnly){
 		if(node == null)
 			return true;
-		if(rightChildOnly(node) || onlyLeavesCanBeSeen && !isLeaf(node))
+		if(rightChildOnly(node) || leavesOnly && !isLeaf(node))
 			return false;
 		else if(leftChildOnly(node))
-			onlyLeavesCanBeSeen = true;
-		return isCompleteRecursive(node.left,  onlyLeavesCanBeSeen) && 
-			   isCompleteRecursive(node.right, onlyLeavesCanBeSeen);
+			leavesOnly = true;
+		return isCompleteRecursive(node.left,  leavesOnly) && 
+			   isCompleteRecursive(node.right, leavesOnly);
 	}
 
 	private static boolean isLeaf(Node node){

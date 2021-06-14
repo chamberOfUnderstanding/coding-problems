@@ -48,8 +48,10 @@ public class Deepest_Odd_Level_Node {
         int deepestOddLevelNode = 0;
         while(!queue.isEmpty()){
             int nodeCount = queue.size();
+            // go level by level
             while(nodeCount-- > 0){
                 Node node = queue.remove();
+                // odd level? record the node
                 if(depth % 2 != 0)
                     deepestOddLevelNode = node.data;
                 if(node.left != null)
@@ -57,6 +59,7 @@ public class Deepest_Odd_Level_Node {
                 if(node.right != null)
                     queue.add(node.right);				
             }
+            // update depth
             depth++;
         }
         return deepestOddLevelNode;

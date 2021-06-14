@@ -33,7 +33,13 @@ public class Count_Leaf_Nodes {
 	}
 
 	private static int countLeafNodes(Node node) {
-		return node == null? 0 : isLeaf(node)? 1 : countLeafNodes(node.left) + countLeafNodes(node.right);
+		return ( node == null ) ? 
+				0 
+				: 
+				isLeaf(node) ? 
+						1 
+						: 
+						countLeafNodes(node.left) + countLeafNodes(node.right);
 	}
 
     private static boolean isLeaf(Node node) {

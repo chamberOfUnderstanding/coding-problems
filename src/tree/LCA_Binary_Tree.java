@@ -64,7 +64,9 @@ public class LCA_Binary_Tree {
     }
     
     public static Node lca(Node node, int data1, int data2){
-        if(node == null || node.data == data1 || node.data == data2)
+        if(node == null)
+        	return null;
+        if(node.data == data1 || node.data == data2)
             return node;
         Node lcaLST = lca(node.left, data1, data2);
         Node lcaRST = lca(node.right, data1, data2);

@@ -78,6 +78,13 @@ public class Root_To_Leaf_Paths {
 			findRootToLeafPaths(node.left, path, allPaths);
 			findRootToLeafPaths(node.right, path, allPaths);
 		}
+//		remove the node in the end to allow backtracking
+//		   1
+//		 2   3 
+//		4 5
+//		Here first path is 1, 2, 4
+//		Once found, 4 has to be removed => 1, 2
+//		1, 2 is what is required for calculating the path to 5
 		path.remove(path.size() - 1);
 	}
 

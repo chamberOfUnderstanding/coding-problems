@@ -12,6 +12,21 @@ import java.util.Queue;
  * http://www.geeksforgeeks.org/connect-nodes-at-same-level-with-o1-extra-space/
  * http://code.geeksforgeeks.org/FyCx8Q
  * 
+ * Input Tree
+ *       A
+ *      / \
+ *     B   C
+ *    / \   \
+ *   D   E   F
+ *
+ *
+ * Output Tree
+ *       A--->NULL
+ *      / \
+ *     B-->C-->NULL
+ *    / \   \
+ *   D-->E-->F-->NULL
+ * 
  * ================================
  * METHOD 1 : Level order traversal
  * ================================
@@ -67,11 +82,15 @@ public class Connect_Nodes_At_Same_Level {
     @SuppressWarnings("unused")
     private static void connectNodesAtSameLevelLOT(Node root) {
         Node previous = null;
+        // queue for level order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         while(!queue.isEmpty()){			
+        	// get size to fetch level by level
             int nodeCount = queue.size();
+            // as long as items are left in this level
             while(nodeCount-- > 0){
+            	// connect this to the previous
                 Node current = queue.remove();
                 if(previous == null)
                     previous = current;
@@ -80,11 +99,13 @@ public class Connect_Nodes_At_Same_Level {
                     previous.connector = current;
                     previous = current;
                 }			
+                // add kids
                 if(current.left != null)
                     queue.add(current.left);
                 if(current.right != null)
                     queue.add(current.right);
             }
+            // reset previous for the next level
             previous = null;
         }
     }

@@ -45,14 +45,21 @@ public class Deepest_Left_Leaf_Node {
     private static int getDeepestLeftLeafLOT(Node root) {
         if(root == null)
             return -1;
+        // level order traversal
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
+        
         int dataOfDeepestNode   = 0;
         boolean foundLeftMostNode = false;
+        
         while(!queue.isEmpty()){
             int nodeCount = queue.size();
+            // go level by level
             while(nodeCount-- > 0){
                 Node node = queue.remove();
+                // record the FIRST level of this level
+                // set it as the required node
+                // set the flag to avoid further checks for this level
                 if(isLeaf(node)){
                     if(!foundLeftMostNode){
                         dataOfDeepestNode = node.data;

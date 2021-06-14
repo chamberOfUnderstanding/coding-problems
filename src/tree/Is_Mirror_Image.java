@@ -62,6 +62,8 @@ public class Is_Mirror_Image {
 			return true;
 		if(null == node1 || null == node2)
 			return false;
+		// the values of the current nodes must match
+		// along with the left of 1 and right of 2 and viz.
 		return node1.data == node2.data &&
 		       areTheyMirrored(node1.left, node2.right) &&
 		       areTheyMirrored(node1.right, node2.left);

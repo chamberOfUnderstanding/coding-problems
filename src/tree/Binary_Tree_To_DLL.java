@@ -69,13 +69,18 @@ public class Binary_Tree_To_DLL {
 	@SuppressWarnings("unused")
     private void convertTreeToDLL(Node node) {
 		if(node != null){
+			// find the left most node
 			convertTreeToDLL(node.left);
+			// set it as first if there'snt any
+			// left most node will be the first node (first one in inorder)
 			if(first == null)
 				first = node;
 			else{
+				// else add this node to the end of the last node
 				last.right = node;
 				node.left = last;
 			}
+			// set the node as the last node, as next items need to be added here
 			last = node;
 			convertTreeToDLL(node.right);
 		}

@@ -58,7 +58,14 @@ public class Huffman_Decoding {
         Node node = root;
         StringBuilder decodedString = new StringBuilder();
         for(int i = 0; i < encodedString.length(); i++){
-            node = encodedString.charAt(i) == '1'? node.right : node.left;
+        	// go right if 1 
+        	// go left if 0
+            node = ( encodedString.charAt(i) == '1' ) ? 
+            				node.right 
+            				: 
+            				node.left;
+            // if leaf, include the data in the output
+            // reset the node to start from the root
             if(isLeaf(node)) {
                 decodedString.append(node.data);
                 node = root;

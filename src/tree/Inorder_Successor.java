@@ -50,7 +50,7 @@ public class Inorder_Successor {
         
         System.out.print("Normal inorder traversal : ");
         inorderTraversal(node1);
-        fillInorderSuccessorsIterative(node1);
+//        fillInorderSuccessorsIterative(node1);
         fillInorderSuccessorsRecursive(node1);
         System.out.print("\nInorder traversal through successor nodes : ");
         inorderTraversalv2(node1);
@@ -85,8 +85,10 @@ public class Inorder_Successor {
     private static void fillInorderSuccessorsRecursive(Node current){
         if(current != null){
             fillInorderSuccessorsRecursive(current.left);
+            // if there's a previous node, then current node is its inorder successor
             if(previous != null)
                 previous.inorderSuccessor = current;
+            // set previous as current to find current's inorder successor
             previous = current;
             fillInorderSuccessorsRecursive(current.right);
         }

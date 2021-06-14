@@ -58,8 +58,11 @@ public class Convert_To_Sum_Tree {
     private static int convertToSumTree(Node node){
         if(node == null)
             return 0;
+        // backup the value as it is needed by the parent
         int backup = node.data;
+        // calculate the new value (LST + RST)
         node.data  = convertToSumTree(node.left) + convertToSumTree(node.right);
+        // return the sum
         return node.data + backup;		
     }	
 

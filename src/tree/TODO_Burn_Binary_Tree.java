@@ -15,7 +15,7 @@ package tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Burn_Binary_Tree {
+public class TODO_Burn_Binary_Tree {
 
 	public static void main(String... x) {
 		Node root = getTree();

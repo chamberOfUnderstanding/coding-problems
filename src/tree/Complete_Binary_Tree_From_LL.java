@@ -38,18 +38,26 @@ public class Complete_Binary_Tree_From_LL {
     }
 
     public static Node completeBinaryTreeFromLL(int[] data) {
-        Node root = new Node(data[0]);
         Queue<Node> queue = new LinkedList<>();
+        // prepare a node out of the first item and enqueue it
+        // this is the root
+        Node root = new Node(data[0]);
         queue.add(root);
+        // scan the rest
         for(int i = 1; i < data.length; i++) {
+        	// prepare a node
             Node newNode  = new Node(data[i]);
             Node lastInsertedNode = queue.peek();
+            // if the node on queue has no left child, add this as left
             if(lastInsertedNode.left == null)
                 lastInsertedNode.left = newNode;
+            // if the node on queue has no right child, add this as right
             else if(lastInsertedNode.right == null)
                 lastInsertedNode.right = newNode;
+            // if it has both children, dequeue it
             if(lastInsertedNode.left != null && lastInsertedNode.right != null)
                 queue.remove();
+            // enqueue current node
             queue.add(newNode);
         }
         return root;

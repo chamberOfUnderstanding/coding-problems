@@ -45,18 +45,24 @@ public class Extract_Leaf_Nodes_As_DLL {
     private static Node first = null;
     private static Node last  = null;	
 
+    // inorder traversal
     private static void extractLeafNodesAsDLL(Node node, Node parent){
         if(node == null)
             return;
         extractLeafNodesAsDLL(node.left, node);
+        // if it's a leaf
         if(isLeaf(node)){
+        	// add it as first if there'snt any
             if(first == null)
                 first = node;
             else{
+            	// else append it in the end
                 last.right = node;
                 node.left = last;
             }
+            // set this as last
             last = node;
+            // destroy the relationshiop with the papa
             if(parent.left == node)
                 parent.left = null;
             else

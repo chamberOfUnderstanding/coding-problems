@@ -36,10 +36,17 @@ public class Children_Sum_Property {
 	}
 
 	private static boolean isChildrenSumPropertyValid(Node node) {
+		// null or leaf means prop is valid
 		if(node == null || isLeaf(node))
 			return true;
-		int sum = (node.left == null? 0 : node.left.data) + (node.right == null? 0 : node.right.data);
-		return sum == node.data && isChildrenSumPropertyValid(node.left) && isChildrenSumPropertyValid(node.right);
+		// check the property for this node, use 0 for null child
+		int leftData = (node.left == null) ? 0 : node.left.data; 
+		int rightData = (node.right == null) ? 0 : node.right.data; 
+		int sum = leftData + rightData;
+		// true if prop is valid for this node and the LST and RST
+		return sum == node.data 
+				&& isChildrenSumPropertyValid(node.left) 
+				&& isChildrenSumPropertyValid(node.right);
 	}
 
 	private static boolean isLeaf(Node node) {

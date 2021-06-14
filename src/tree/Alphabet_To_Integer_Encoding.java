@@ -81,15 +81,20 @@ public class Alphabet_To_Integer_Encoding {
     }
 
     private static void decode(int i, Node node, int[] array) {
+    	// exit after scanning all items
         if(i == array.length)
             return;
+        // skip this if it's a 0
         if(array[i] == 0){
             decode(i + 1, node, array);
             return;
         }
+        // get the alphabet for this one and add it as left child of current node
         char alphabet = getSingleDigitAlphabet(i, array);
         node.left = new Node(node.word + alphabet);
+        // decode the next character
         decode(i + 1, node.left, array);
+        // if this one is combinable with the next one, combine, add as right child and decode this + 2
         if(i < array.length - 1 && array[i] * 10 + array[i + 1] < 26) {
             alphabet = getDoubleDigitAlphabet(i, array); 
             node.right = new Node(node.word + alphabet);
