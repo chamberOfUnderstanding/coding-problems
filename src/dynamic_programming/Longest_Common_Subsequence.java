@@ -5,12 +5,12 @@ package dynamic_programming;
  *
  * Given two sequences, find the length of longest subsequence present in both of them.
  * A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous.
- * For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”.
+ * For example, â€œabcâ€, â€œabgâ€, â€œbdfâ€, â€œaegâ€, â€˜â€acefgâ€, .. etc are subsequences of â€œabcdefgâ€.
  * Strings are not necessarily of the same lengths. 
  * So a string of length n has 2^n different possible subsequences.
  * 
- * LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
- * LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+ * LCS for input Sequences â€œABCDGHâ€ and â€œAEDFHRâ€ is â€œADHâ€ of length 3.
+ * LCS for input Sequences â€œAGGTABâ€ and â€œGXTXAYBâ€ is â€œGTABâ€ of length 4.
  * 
  * http://www.geeksforgeeks.org/dynamic-programming-set-4-longest-common-subsequence/
  * http://www.geeksforgeeks.org/printing-longest-common-subsequence/
@@ -70,8 +70,11 @@ public class Longest_Common_Subsequence {
             for(int j = 0; j <= length2; j++)
                 if(i == 0 || j == 0)
                     lcs[i][j] = 0;
+                // if the previous characters match, current i, j lcs is 1 + previous lcs
                 else if(string1.charAt(i - 1) == string2.charAt(j - 1))
                     lcs[i][j] = lcs[i - 1][j - 1] + 1;
+                // else max of include current i and not j
+                // and exclude current j and not i
                 else
                     lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
         printLCS(lcs, string1, string2);
