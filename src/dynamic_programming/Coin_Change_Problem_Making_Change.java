@@ -103,7 +103,7 @@ public class Coin_Change_Problem_Making_Change {
     private static int changeMakerDynamicProgrammingv2(int[] denominations, int target) {
         int numberOfCoins = denominations.length;
         
-        // sort the demonimations
+        // sort the demonimations to go from low to high denominations
         Arrays.sort(denominations);
         
         // prepare a lookup for ways to achieve all amounts till the target amount
