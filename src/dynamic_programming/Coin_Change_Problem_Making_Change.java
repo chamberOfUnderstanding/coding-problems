@@ -14,7 +14,9 @@ import java.util.List;
  * So the output should be 5.
  * 
  * http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/
- * 
+ * https://www.youtube.com/watch?v=ZI17bgz07EE
+ * https://www.youtube.com/watch?v=l_nR5X9VmaI
+ *
  * METHOD 1 : Recursion
  *            If the amount = 0, there is 1 way of achieving an amount of 0, by not considering any coin
  *            If the amount < 0, there is no way to do it
