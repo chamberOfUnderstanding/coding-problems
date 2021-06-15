@@ -104,6 +104,10 @@ public class Coin_Change_Problem_Making_Change {
         int numberOfCoins = denominations.length;
         
         // sort the demonimations to go from low to high denominations
+        // the sequence of denominations make sure that permutations dont appear in the result
+        // eg. 2 3 5 , amount 7
+        // if 2 is filled and then 5 is seen, combination will be 2 5
+        // 5 2  is not possible as 5 is never seen before 2
         Arrays.sort(denominations);
         
         // prepare a lookup for ways to achieve all amounts till the target amount
