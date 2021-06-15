@@ -10,7 +10,8 @@ import java.util.Arrays;
  * For example, the length of LIS for {10, 22, 9, 33, 21, 50, 41, 60, 80} is 6 and LIS is {10, 22, 33, 50, 60, 80}.
  * 
  * http://www.geeksforgeeks.org/dynamic-programming-set-3-longest-increasing-subsequence/
- * 
+ * https://www.youtube.com/watch?v=odrfUCS9sQk
+ *
  * METHOD 1 : Initialize LIS to 1 for all items. This is the base case as all items are a part of
  *             the LIS containing just that item
  *            For each item i
