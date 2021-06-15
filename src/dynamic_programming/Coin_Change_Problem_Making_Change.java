@@ -135,7 +135,10 @@ public class Coin_Change_Problem_Making_Change {
                 // lookup[10] = lookup[10] + lookup[5] => 1
                 // for coin = 10, lookup[10] will already be 1 thanks to the previous step
                 // lookup[10] = lookup[10] + lookup[10-10] => 1 + 1 => 2
-                lookup[amount] += lookup[amount - denominations[coin]];
+                int excluded = lookup[amount];
+                int included = lookup[amount - denominations[coin]];
+        
+                lookup[amount] = included + excluded;
         return lookup[target];
     }
 
