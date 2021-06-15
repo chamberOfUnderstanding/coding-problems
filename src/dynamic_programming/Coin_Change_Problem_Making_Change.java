@@ -116,7 +116,7 @@ public class Coin_Change_Problem_Making_Change {
         for(int coin = 0; coin < numberOfCoins; coin++)
             
             // loop from the lowest denomination
-            // there are 0 ways to achieve any amount below the lowest denomination
+            // there are 0 ways to achieve any amount below the current denomination
             // so they can be skipped
             for(int amount = denominations[coin]; amount <= target; amount++)
                 
