@@ -38,32 +38,42 @@ public class Longest_Increasing_Subsequence {
 
     private static int findLIS(int[] array) {
         int[] lis = new int[array.length];
+        
+        // all items by themselves are part of a lis of size 1
         Arrays.fill(lis, 1);
+        
         for(int i = 0; i < array.length; i++)
+            // i + 1 because i can only influence the items on its RIGHT when looking for an increasing sequence
             for(int j = i + 1; j < array.length; j++)
+                // j can be added to the sequnce if a[j] > a[i]
                 if(array[j] > array[i])
+                    // here lis[i] would be the sequences formed by other elements before i
                     lis[j] = Math.max(lis[j], lis[i] + 1);
+        
+        // find longest
         int longestSequence = lis[0];
         for(int i = 1; i < array.length; i++)
             longestSequence = Math.max(longestSequence, lis[i]);
+        
         return longestSequence;
     }
 
     private static int findAndPrintLIS(int[] array) {
-        int[] length = new int[array.length];
+        int[] lis = new int[array.length];
         int[] parent = new int[array.length];
-        Arrays.fill(length, 1);
+        Arrays.fill(lis, 1);
         Arrays.fill(parent, -1);
         for(int i = 0; i < array.length; i++)
             for(int j = i+1; j < array.length; j++)
                 if(array[j] > array[i]) {
-                    length[j] = Math.max(length[j], length[i] + 1);
+                    lis[j] = Math.max(lis[j], lis[i] + 1);
+                    // i connects to j in the sequence, so i is j's parent
                     parent[j] = i;
                 }
-        int longestSequence      = length[0];
+        int longestSequence      = lis[0];
         int longestSequenceIndex = parent[0];
         for(int i = 1; i < array.length; i++)
-            if(length[i] > longestSequence) {
+            if(lis[i] > longestSequence) {
                 longestSequence      = length[i];
                 longestSequenceIndex = i;
             }
