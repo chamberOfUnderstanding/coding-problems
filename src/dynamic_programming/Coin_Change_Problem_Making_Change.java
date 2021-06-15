@@ -71,10 +71,18 @@ public class Coin_Change_Problem_Making_Change {
     }
 
     private static int changeMakerRecursive(int[] denominations, int availableCoins, int amount) {
+        // only 1 way to achieve 0 -> Dont include any coins
         if(amount == 0)
             return 1;
+        
+        // no ways to achieve < 0
+        // no ways to achieve anything if there are no coins
         if(amount < 0 || availableCoins <= 0)
             return 0;
+        
+        // (1) including the coin will reduce the amount by the coins denomination
+        // (2) excluding the coin will reduce the number of coins by 1
+        // total = (1) + (2)    
         return changeMakerRecursive(denominations, availableCoins, amount - denominations[availableCoins - 1])
                 + changeMakerRecursive(denominations, availableCoins - 1, amount);
     }
@@ -92,15 +100,39 @@ public class Coin_Change_Problem_Making_Change {
         return lookup[maxAmount][numberOfCoins];
     }
 
-    private static int changeMakerDynamicProgrammingv2(int[] denominations, int maxAmount) {
+    private static int changeMakerDynamicProgrammingv2(int[] denominations, int target) {
         int numberOfCoins = denominations.length;
+        
+        // sort the demonimations
         Arrays.sort(denominations);
-        int[] lookup = new int[maxAmount + 1];
+        
+        // prepare a lookup for ways to achieve all amounts till the target amount
+        int[] lookup = new int[target + 1];
+        
+        // only 1 way to achieve 0 -> By not including any coin
         lookup[0] = 1;
+        
+        // loop for all available denominations
         for(int coin = 0; coin < numberOfCoins; coin++)
-            for(int amount = denominations[coin]; amount <= maxAmount; amount++)
+            
+            // loop from the lowest denomination
+            // there are 0 ways to achieve any amount below the lowest denomination
+            // so they can be skipped
+            for(int amount = denominations[coin]; amount <= target; amount++)
+                
+                // ways to achieve the current amount 
+                //   = ways to achieve this amount if this coin was not included
+                //     + ways to achieve this amount if this coin was included (this reduces the amount)
+                // e.g amount = 10, denominations = 5, 10
+                // for coin = 5
+                // lookup[5] = lookup[5] + lookup[10-5]
+                // lookup[5] = 0 + lookup[0] => 1
+                // there's one way to achieve 5 with a denomination of 5
+                // lookup[10] = lookup[10] + lookup[5] => 1
+                // for coin = 10, lookup[10] will already be 1 thanks to the previous step
+                // lookup[10] = lookup[10] + lookup[10-10] => 1 + 1 => 2
                 lookup[amount] += lookup[amount - denominations[coin]];
-        return lookup[maxAmount];
+        return lookup[target];
     }
 
     private static void waysToMakeChangeRecursive(int maxAmount, int[] denominations) {
