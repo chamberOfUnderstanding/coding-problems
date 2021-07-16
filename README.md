@@ -35,7 +35,7 @@
 |29|[Minimum cost to combine ropes](src/array/Minimum_Cost_To_Combine_Ropes.java)|[1](http://www.geeksforgeeks.org/connect-n-ropes-minimum-cost/)|
 |30|[Minimum difference between element pairs](src/array/Minimum_Difference_Pair.java)|[1](http://www.geeksforgeeks.org/find-minimum-difference-pair/)|
 |31|[K missing natural numbers](src/array/Missing_Natural_Numbers.java)|[1](https://www.geeksforgeeks.org/find-first-k-natural-numbers-missing-given-array/)|
-|32|[Most repetitive element](src/array/Most_Repetitive.java)|[1]( http://www.geeksforgeeks.org/find-the-maximum-repeating-number-in-ok-time/)|
+|32|[Most repetitive element](src/array/Most_Repetitive_Element.java)|[1]( http://www.geeksforgeeks.org/find-the-maximum-repeating-number-in-ok-time/)|
 |33|[Generate all pairs](src/array/Pairs_In_An_Array.java)|[1](http://stackoverflow.com/questions/2392652/java-find-all-possible-pairs-in-an-array)|
 |34|[Peak element - one that is larger than its neighbors](src/array/Peak_Element_1D.java)|[1](https://www.geeksforgeeks.org/find-a-peak-in-a-given-array/)|
 |35|[Pair of elements with the given product](src/array/Product_Pair_In_An_Array.java)|[1](http://www.geeksforgeeks.org/pair-with-given-product-set-1-find-if-any-pair-exists/)|
