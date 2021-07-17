@@ -112,10 +112,10 @@
 | Problem                                                    | Reference   |
 | ---------------------------------------------------------- |--------------------------------------------------------|
 | [All combinations of array elements that can produce the given sum](src/backtracking/Combination_Sum.java) | [1](https://discuss.leetcode.com/topic/46161/a-general-approach-to-backtracking-questions-in-java-subsets-permutations-combination-sum-palindrome-partitioning) |
-| [The path taken by a knight to cover the entire chess board](src/array/Knights_Tour.java) | [1](http://www.geeksforgeeks.org/backtracking-set-1-the-knights-tour-problem/) |
-| [A configuration in an NxN chess board where N queens won't attack eachother](src/array/N_Queens.java) | [1](http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/) |
-| [All sub arrays of the given array](src/array/Subsets.java) |  |
-| [Solution for the given sudoku puzzle](src/array/Sudoku_Solver.java) | [1](http://www.geeksforgeeks.org/backtracking-set-7-suduku/) |
+| [The path taken by a knight to cover the entire chess board](src/backtracking/Knights_Tour.java) | [1](http://www.geeksforgeeks.org/backtracking-set-1-the-knights-tour-problem/) |
+| [A configuration in an NxN chess board where N queens won't attack eachother](src/backtracking/N_Queens.java) | [1](http://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/) |
+| [All sub arrays of the given array](src/backtracking/Subsets.java) |  |
+| [Solution for the given sudoku puzzle](src/backtracking/Sudoku_Solver.java) | [1](http://www.geeksforgeeks.org/backtracking-set-7-suduku/) |
 
 # Searching & Sorting
 | Problem                                                    |Reference   |
