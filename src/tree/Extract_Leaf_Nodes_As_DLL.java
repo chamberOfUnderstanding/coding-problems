@@ -23,6 +23,28 @@ package tree;
  * 
  */
 
+/**
+Let the following be input binary tree
+        1
+     /     \
+    2       3
+   / \       \
+  4   5       6
+ / \         / \
+7   8       9   10
+
+
+Output:
+Doubly Linked List
+785910
+
+Modified Tree:
+        1
+     /     \
+    2       3
+   /         \
+  4           6 
+*/  
 public class Extract_Leaf_Nodes_As_DLL {
 
     public static void main(String...strings){
