@@ -5,7 +5,7 @@ package tree;
  * 
  * Given preorder and inorder traversals of a binary tree, construct the tree
  * 
- * http://www.geeksforgeeks.org/full-and-complete-binary-tree-from-given-preorder-and-postorder-traversals/
+ * https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
  * 
  * ====================
  * METHOD 1 : Partition
